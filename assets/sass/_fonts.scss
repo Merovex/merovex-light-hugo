@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans|Merriweather|Oswald|");
+$font-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: helvetica, "Merriweather Sans", sans-serif, $font-emoji;
+$font-family-serif: "Merriweather", Georgia, serif, $font-emoji;
+$font-family-header: Oswald, $font-family-sans-serif;
+$font-family-print: Bookerly, Georgia, serif, $font-emoji;
+$font-size-base: 1.125rem;
+$font-size-base: 1rem;
+// $font-size-base: 18px;
+body {
+  font-size: 18px !important;
+  font-family: $font-family-sans-serif;
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+}
+.header-font { font-family: $font-family-header; }
+.sans-font { font-family: $font-family-sans-serif; }
+.serif-font { font-family: $font-family-serif; }
+h1,
+h2,
+h3 {
+  @extend .header-font;
+}
+h4 {
+  @extend .sans-font;
+}
+@include media-breakpoint-up(sm) {
+  h1 {
+    font-size: 2em !important;
+    line-height: 1.25 !important;
+  }
+  h2 {
+    font-size: 1.65em !important;
+    line-height: 1.15 !important;
+  }
+  h3 {
+    font-size: 1.38em !important;
+    line-height: 1.15 !important;
+  }
+  h4 {
+    font-size: 1.125em !important;
+    line-height: 1.22 !important;
+  }
+  blockquote {
+    font-size: 1.25em !important;
+    line-height: 1.25 !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  h1 {
+    font-size: 2.2em !important;
+    line-height: 1.15 !important;
+  }
+  h4 {
+    font-size: 1.125em !important;
+    line-height: 1.11 !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  h1 {
+    font-size: 3em !important;
+    line-height: 1.05 !important;
+  }
+  h2 {
+    font-size: 2.25em !important;
+    line-height: 1.25 !important;
+
+  }
+  h3 {
+    font-size: 1.75em !important;
+    line-height: 1.25 !important;
+  }
+  h4 {
+    font-size: 1.125em !important;
+    line-height: 1.22 !important;
+  }
+  blockquote {
+    font-size: 1.5em !important;
+    line-height: 1.46 !important;
+  }
+}
+
+@media print {
+  h1 {
+    font-size: 36pt !important;
+    line-height: 1.25 !important;
+  }
+  h2 {
+    font-size: 24pt !important;
+    line-height: 1.25 !important;
+    margin-top: 1em;
+  }
+  h3 {
+    font-size: 18pt !important;
+    line-height: 1.25 !important;
+    margin-top: 1em;
+  }
+  h4 {
+    font-size: 14pt !important;
+    line-height: 1.25 !important;
+    margin-top: 1em;
+  }
+}

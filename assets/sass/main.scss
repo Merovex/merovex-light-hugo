@@ -1,0 +1,25 @@
+@import "bootstrap-4.3.1/bootstrap";
+@import "figure";
+@import "fonts";
+
+h1 {
+  @extend .text-center;
+  small {
+    display: block; font-size: 60%;
+  }
+}
+.blog-post p:first-of-type{
+    font-size: 1.25rem;
+}
+nav svg {
+  height: 2rem;
+  fill: #FFF;
+}
+.single-column {
+  @extend .container;
+  margin-top: 1in;
+  article {
+    @extend .col-lg-8;
+    @extend .mx-auto;
+  }
+}
