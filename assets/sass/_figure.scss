@@ -2,6 +2,7 @@ figure {
     @extend .row;
     @extend .d-print-none;
     position: relative;
+    font-family: var(--font-family-sans-serif) !important;
     img {
       width: 100%;
       height: 25%;

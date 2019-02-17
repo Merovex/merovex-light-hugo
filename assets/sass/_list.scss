@@ -1,0 +1,16 @@
+.list {
+  margin-top: 1in;
+  @extend .container;
+  // font-size: 1in;
+  article {
+    @extend .col-md-4;
+    @extend .card;
+    h3 {
+      @extend .card-title;
+    }
+    img {
+      @extend .rounded-lg;
+      @extend .card-img-top;
+    }
+  }
+}

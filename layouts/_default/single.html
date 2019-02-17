@@ -1,5 +1,6 @@
 {{ define "main" }}
-<main class='single-column' aria-label="Content">
+<main class='single' aria-label="Content">
+  {{ if .Params.photo }}
   <figure>
     <img src="https://d1czp97ry8if6j.cloudfront.net/images/articles/{{ .Params.photo.image }}" alt="">
     <figcaption>
@@ -9,6 +10,7 @@
       </a>, {{ .Params.photo.license }}.
     </figcaption>
   </figure>
+  {{ end }}
   <header>
     <span class='d-none d-print-block logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
  viewBox="0 0 450.000000 450.000000"

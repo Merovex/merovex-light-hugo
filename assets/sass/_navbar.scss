@@ -1,0 +1,14 @@
+nav {
+  font-family: var(--font-family-sans-serif);
+  svg {
+    height: 2rem;
+    fill: #FFF;
+  }
+  @extend .navbar;
+  @extend .navbar-dark;
+  @extend .bg-dark;
+  @extend .fixed-top;
+  @extend .d-print-none;
+  @extend .navbar-expand-lg;
+  background: var(--primary-color) !important;
+}

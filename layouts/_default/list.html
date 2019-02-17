@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="list">
+  <div class="row fnord">
+{{ range .Data.Pages }}
+  <article>
+    <img src="https://d1czp97ry8if6j.cloudfront.net/images/articles/{{ .Params.photo.image }}" alt="">
+    <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
+    <div class="card-body">{{.Description}}</div>
+    <a class="btn btn-outline-primary" href="{{ .Permalink }}">Read more</a>
+  </article>
+{{end}}
+  </div>
+</main>
+{{end}}

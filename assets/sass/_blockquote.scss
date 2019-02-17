@@ -1,0 +1,50 @@
+blockquote {
+  font-size: 0.9em !important;
+  // border: 1px solid red;
+  font-family: var(--font-family-serif);
+
+  // color: darken(color_adjust_contrast_AERT($primary, $body-bg),20);
+  width: 80%;
+  margin: 2em auto 1em auto;
+  background: none;
+  position: relative;
+  z-index: 600;
+  text-align: left;
+  blockquote {
+    p:first-child:before {
+      content: "";
+      font-size: 0;
+    }
+  }
+  p:first-of-type:first-letter {
+      float: none;
+      font-size: inherit !important;
+      line-height: 1;
+      padding: 0;
+      color:       var(--body-text-color) !important;
+      font-family: var(--font-family-serif);
+  }
+  p:first-child:before {
+    content: "\201C";
+    color: var(--primary-color);
+    font-family: var(--font-family-serif);
+    font-size: 6em;
+    font-weight: 700;
+    opacity: 0.2;
+    position: absolute;
+    top: -0.4em;
+    left: -0.6em;
+    text-shadow: none;
+    z-index: -300;
+  }
+  cite {
+    color:var(--primary-color);
+    font-size: 0.9rem;
+    font-family: var(--font-family-sans-serif);
+    display: block;
+    margin-top: 5px;
+    &:before {
+      content: "\2014 \00A0";
+    }
+  }
+}
