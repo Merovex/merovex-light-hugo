@@ -1,4 +1,4 @@
-nav {
+nav#site {
   font-family: var(--font-family-sans-serif);
   svg {
     height: 2rem;
@@ -11,4 +11,22 @@ nav {
   @extend .d-print-none;
   @extend .navbar-expand-lg;
   background: var(--primary-color) !important;
+  #navbarNavDropdown {
+    ul {
+      @extend .navbar-nav;
+      @extend .mx-auto;
+      @extend .text-uppercase;
+      li {
+        @extend .nav-item;
+        a {
+          @extend .nav-link;
+        }
+      }
+    }
+  }
+}
+nav#pagination {
+  ul.pagination {
+    @extend .justify-content-center;
+  }
 }

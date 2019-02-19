@@ -1,14 +1,24 @@
-{{ define "main" }}
+{{ define "main" }}{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
 <main class="list">
-  <div class="row fnord">
-{{ range .Data.Pages }}
-  <article>
-    <img src="https://d1czp97ry8if6j.cloudfront.net/images/articles/{{ .Params.photo.image }}" alt="">
-    <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
-    <div class="card-body">{{.Description}}</div>
-    <a class="btn btn-outline-primary" href="{{ .Permalink }}">Read more</a>
-  </article>
-{{end}}
+  <nav id='pagination' aria-label='Post pagination'>{{ template "_internal/pagination.html" . }}</nav>
+  <div class="row">{{ range $paginator.Pages }}
+    <div class="col-md-4">
+      <article>
+        <img src="/images/articles/{{ .Params.photo.image }}" alt="">
+        <div class="card-body">
+          <h4><small>{{ range .Params.categories }}<a href="/categories/{{ . | urlize }}">{{ . |title }}</a> {{ end }}</small><a href="{{.Permalink}}">{{.Title}}</a></h4>
+          <p class="card-text description">
+            <time datetime="{{.Date}}">{{ dateFormat "2 Jan 2006" .Date }}.</time> {{.Description}}
+          </p>
+          {{ if isset .Params "tags" }}<p class='text-center'>
+              {{ range .Params.tags }}<span class='badge badge-primary' href="/tags/{{ . | urlize }}">{{ .|title  }}</span> {{ end }}
+          {{ end }}</p>
+          <p class='text-center'><a class="btn btn-outline-primary" href="{{ .Permalink }}">Read more</a></p>
+        </div>
+      </article>
+    </div>
+    {{end}}
   </div>
+  <nav id='bottom-pagination' aria-label='Post pagination'>{{ template "_internal/pagination.html" . }}</nav>
 </main>
 {{end}}

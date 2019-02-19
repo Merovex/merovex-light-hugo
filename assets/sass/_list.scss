@@ -1,16 +1,29 @@
 .list {
   margin-top: 1in;
   @extend .container;
-  // font-size: 1in;
   article {
-    @extend .col-md-4;
     @extend .card;
-    h3 {
-      @extend .card-title;
-    }
-    img {
-      @extend .rounded-lg;
-      @extend .card-img-top;
-    }
+    margin-bottom: 1em;
+  }
+}
+.list, .card {
+  h4, h5 {
+    @extend .card-title;
+    min-height: 4em;
+  }
+  .description {
+    height: 8em;
+  }
+  img {
+    @extend .card-img-top;
+  }
+  p {
+    @extend .card-text;
+  }
+  padding-bottom: 0.5em;
+  time {
+    font-family: var(--font-family-sans-serif);
+    font-size: 0.8em;
+    font-weight: bolder;
   }
 }

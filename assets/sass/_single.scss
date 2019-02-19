@@ -1,29 +1,31 @@
 .single {
   @extend .container;
   margin-top: 1in;
+  margin-bottom: 0.75in;
   article {
     @extend .col-lg-9;
     @extend .mx-auto;
-  }
-  a {
-    color: var(--blue);
-    text-decoration: underline;
-    &:visited {
-      color: var(--purple);
+    a {
+      color: var(--blue);
+      text-decoration: underline;
+      &:visited {
+        color: var(--purple);
+      }
     }
-  }
-  article {
     p:first-of-type {
       font-size: 1.25rem;
+      line-height: 1.5;
     }
-    p:first-of-type:first-letter {
+    &>p:first-of-type:first-letter {
         float: left;
-        font-size: 3.7rem;
-        line-height: 1;
-        padding: 0 4px;
+        font-size: 4rem;
+        line-height: 0.7;
+        margin-top: 7px;
+        padding-right: 4px;
         color:       var(--primary-color) !important;
         font-family: var(--font-family-serif);
     }
     h2, h3 { color: var(--primary-color); }
   }
+
 }
