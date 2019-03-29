@@ -1,0 +1,24 @@
+<div class="col-md-4">
+  <div class='card'>
+    <img src="/images/articles/{{ .context.Params.photo.image }}" alt="">
+    <div class="card-body">
+      <h4><a href="{{.context.Permalink}}">{{.context.Title}}</a></h4>
+      <p class="card-text description">
+        <span class='display-block text-center'>{{ if isset .context.Params "tags" }}
+          {{ range .context.Params.tags }}<span class='badge badge-primary' href="/tags/{{ . | urlize }}">{{ .|title  }}</span> {{ end }}
+      {{ end }}</span>
+      <br>
+        <time datetime="{{.context.Date}}">{{ dateFormat "2 Jan 2006" .context.Date }}.</time> {{.context.Description}}
+      </p>
+      <p class='text-center'>
+        <a class="btn btn-outline-primary" href="{{ .context.Permalink }}">
+          {{ if .prev }}
+          <span aria-hidden="true">«</span> Read Previous
+          {{ else }}
+          Read Next <span aria-hidden="true">»</span>
+          {{ end }}
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

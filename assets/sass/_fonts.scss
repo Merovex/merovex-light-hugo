@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans|Libre+Franklin|Hammersmith+One|EB+Garamond");
-// $font-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-// librecaslondisplay_regular_macroman
-// librecaslontext_bold_macroman
-// librecaslontext_italic_macroman
-// libre-caslon-regular
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin;Open+Sans");
 @font-face {
     font-family: 'Libre Caslon Display';
     src: url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.eot');
@@ -28,18 +23,16 @@
 }
 
 $font-size-base: 1.125rem;
-$font-size-base: 1rem;
-// $font-size-base: 18px;
 :root {
   --font-family-sans-serif:  "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-serif: "Libre Caslon", sans-serif, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-header: 'Libre Caslon Display', "Hammersmith One", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-serif: "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-header: 'Libre Caslon Display', "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-print:  Bookerly, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
-  font-size: 18px !important;
-  font-family: var(--font-family-serif);
+  font-size: $font-size-base !important;
+  font-family: var(--font-family-sans-serif);
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
 }
@@ -48,18 +41,11 @@ body {
 .serif-font  { font-family: var(--font-family-serif); }
 h1,
 h2,
-h3 {
-  font-family: var(--font-family-header);
+h3,
+h4 {
+  font-family: var(--font-family-sans-serif);
   margin-bottom: 0.4em;
   margin-top: 1.2em;
-}
-.badge, .btn { font-family: var(--font-family-sans-serif); }
-h2, h3, h4 {  font-family: var(--font-family-sans-serif)}
-h1, h4 {
-  @extend .text-center;
-  font-weight: bold;
-  color: var(--primary-color);
-  a { text-decoration: none !important; }
   small {
     display: block;
     font-size: 50%;
@@ -67,6 +53,13 @@ h1, h4 {
     font-weight: 400;
     font-family: var(--font-family-sans-serif);
   }
+}
+.badge, .btn { font-family: var(--font-family-sans-serif); }
+h1 {
+  font-family: var(--font-family-header);
+  @extend .text-center;
+  font-weight: bold;
+  a { text-decoration: none !important; }
 }
 @include media-breakpoint-up(sm) {
   h1 {

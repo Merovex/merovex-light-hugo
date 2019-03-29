@@ -2,7 +2,8 @@
 main#lost {
   background: #888 url(/images/hall-1929422_1920.jpg) center center;
   object-fit: contain;
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   padding-top: 1in !important;
   display: flex;

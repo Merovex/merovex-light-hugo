@@ -28,5 +28,6 @@ nav#site {
 nav#pagination {
   ul.pagination {
     @extend .justify-content-center;
+    font-family: var(--font-family-sans-serif);
   }
 }

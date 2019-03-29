@@ -2,7 +2,7 @@
 <main class="list">
   <nav id='pagination' aria-label='Post pagination'>{{ template "_internal/pagination.html" . }}</nav>
   <div class="row">{{ range $paginator.Pages }}
-    <div class="col-md-4">
+    <div class="col-md-4 d-flex">
       <article>
         <img src="/images/articles/{{ .Params.photo.image }}" alt="">
         <div class="card-body">
@@ -13,6 +13,8 @@
           {{ if isset .Params "tags" }}<p class='text-center'>
               {{ range .Params.tags }}<span class='badge badge-primary' href="/tags/{{ . | urlize }}">{{ .|title  }}</span> {{ end }}
           {{ end }}</p>
+        </div>
+        <div class="card-footer bg-transparent">
           <p class='text-center'><a class="btn btn-outline-primary" href="{{ .Permalink }}">Read more</a></p>
         </div>
       </article>

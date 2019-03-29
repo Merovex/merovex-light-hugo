@@ -75,50 +75,30 @@
           {{ range .Params.categories }}<a href="/categories/{{ . | urlize }}">{{ . |title }}</a> {{ end }}
         </a>
       </small>
-      {{ if .Draft }}DRAFT: {{end}}
+      {{ if .Draft }}<small style='color: var(--red); font-family: var(--font-family-sans-serif)'>DRAFT</small> {{end}}
       {{ .Params.title }}
     </h1>
     {{ if isset .Params "tags" }}<p class='text-center'><span class="text-muted sans-font">Tagged as: </span>{{ range .Params.tags }}
       <a class='badge badge-secondary' style='color: white; text-decoration: none;' href="/tags/{{ . | urlize }}">{{ .|title  }}</a> {{ end }}
     {{ end }}</p>
+    {{- partial "reading-time.html" (dict "context" .) -}}
   </header>
   <article>
+    {{ if and (gt .WordCount 400 ) (.Params.toc) }}
+    <aside>
+      {{.TableOfContents}}
+    </aside>
+    {{ end }}
     {{ .Content }}
   </article>
   <aside class='row justify-content-center'>
     {{with .PrevInSection}}
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/images/articles/{{ .Params.photo.image }}" alt="">
-          <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
-          <p class="text-muted text-center sans-font">{{ dateFormat "2 Jan 2006" .Date }}{{ if isset .Params "tags" }}</p>
-          <p class='text-center'>
-              {{ range .Params.tags }}<span class='badge badge-primary' href="/tags/{{ . | urlize }}">{{ .|title  }}</span> {{ end }}
-          {{ end }}</p>
-          <p class='text-center'>
-            <a class="btn btn-outline-primary" href="{{ .Permalink }}">
-              <span aria-hidden="true">«</span> Read Previous
-            </a>
-          </p>
-        </div>
-      </div>
+      {{ $prev := true }}
+      {{- partial "aside-card.html" (dict "context" . "prev" $prev) -}}
     {{end}}
     {{with .NextInSection}}
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/images/articles/{{ .Params.photo.image }}" alt="">
-          <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
-          <p class="text-muted text-center sans-font">{{ dateFormat "2 Jan 2006" .Date }}{{ if isset .Params "tags" }}</p>
-          <p class='text-center'>
-              {{ range .Params.tags }}<span class='badge badge-primary' href="/tags/{{ . | urlize }}">{{ .|title  }}</span> {{ end }}
-          {{ end }}</p>
-          <p class='text-center'>
-            <a class="btn btn-outline-primary" href="{{ .Permalink }}">
-              Read Next<span aria-hidden="true"> »</span>
-            </a>
-          </p>
-        </div>
-      </div>
+      {{ $prev := false }}
+      {{- partial "aside-card.html" (dict "context" . "prev" $prev) -}}
     {{end}}
   </aside>
 
