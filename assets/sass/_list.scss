@@ -12,6 +12,9 @@
     @extend .card-title;
     @extend .text-center;
     min-height: 4em;
+    small {
+      font-size: 0.7em;
+    }
   }
   img {
     @extend .card-img-top;
