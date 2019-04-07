@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Franklin;Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin;Open+Sans;Montserrat");
 @font-face {
     font-family: 'Libre Caslon Display';
     src: url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.eot');
@@ -53,6 +53,11 @@ h4 {
     font-weight: 400;
     font-family: var(--font-family-sans-serif);
   }
+}
+.navbar-brand {
+  font-family: Montserrat;
+  // font-weight: bold;
+  font-size: 1.3em;
 }
 .badge, .btn { font-family: var(--font-family-sans-serif); }
 h1 {

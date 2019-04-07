@@ -8,7 +8,10 @@
   {{ if .Description }}
   <meta name="description" content="{{.Description | truncate 160 }}">{{ end }}
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="/feed.xml">
+
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
 
   <!-- Facebook OGP cards (https://developers.facebook.com/tools/debug/og/object/) https://www.google.com/webmasters/tools/dashboard -->
   <meta property="fb:app_id"       content="{{ .Site.Author.fb_app_id }}" />
