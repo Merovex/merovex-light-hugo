@@ -1,0 +1,24 @@
+header {
+  grid-area: head;
+  display: grid;
+  * { padding: 0; margin: 0; }
+}
+#brand {
+  grid-area: brand;
+  // display: inline-flex;
+}
+nav {
+  grid-area: navbar;
+  text-align: center;
+  ul {
+    display: inline-flex;
+    list-style: none;
+    border: 1px solid blue;
+    li {
+      display: inline-flex;
+      margin: 0 0.5em;
+      a {padding: 0.7em;}
+      border: 1px solid blue;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+footer {
+  background:  var(--primary-color-light);
+  font-family: var(--font-family-sans-serif);
+  min-height: 3in;
+  position: relative;
+  margin: 0;
+  padding-top: 0.5in;
+  color: white;
+  svg {
+    height: 2em;
+    fill: white;
+  }
+  .copyright {
+    @extend .text-center;
+    background: var(--primary-color-dark);
+    color: rgba(white,0.4);
+    font-size: 0.9em;
+    padding: 0.5em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
