@@ -1,5 +1,6 @@
 // // HERE
 @import "vars";
+@import "fonts";
 @import "reboot"; //  Bootstrap's reboot
 @import "grid";
 @import "temp";
@@ -9,4 +10,5 @@
 
 main {
   grid-area: main;
+  padding-top: 0.5in;
 }

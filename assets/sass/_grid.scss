@@ -21,10 +21,9 @@
           "main"
           "foot";
         header {
-          grid-template-rows: 1fr auto;
-          grid-template-areas:
-            "brand",
-            "navbar";
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: 1fr;
+          grid-template-areas: "brand navbar";
         }
         footer {
           grid-template-rows: 1fr 1fr 1fr auto;
@@ -42,10 +41,9 @@
           "... main ..."
           "foot foot foot";
         header {
-          grid-template-columns: auto 380px 380px auto;
-          grid-template-rows: auto;
-          grid-template-areas:
-            "... brand navbar ...";
+          grid-template-columns: auto 250px 500px auto;
+          grid-template-rows: 1fr;
+          grid-template-areas: "... brand navbar ...";
         }
         footer {
           min-height: 300px;
@@ -59,7 +57,7 @@
       @media (min-width: 992px) {
         @include container($cnt-lg);
         header {
-          grid-template-columns: auto 480px 480px auto;
+          grid-template-columns: auto 320px 640px auto;
         }
         footer {
           grid-template-columns: auto 320px 320px 320px auto;

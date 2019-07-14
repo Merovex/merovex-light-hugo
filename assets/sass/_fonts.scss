@@ -54,19 +54,18 @@ h4 {
     font-family: var(--font-family-sans-serif);
   }
 }
-.navbar-brand {
+#brand {
   font-family: Montserrat;
-  // font-weight: bold;
   font-size: 1.3em;
 }
 .badge, .btn { font-family: var(--font-family-sans-serif); }
 h1 {
   font-family: var(--font-family-header);
-  @extend .text-center;
+  text-align: center;
   font-weight: bold;
   a { text-decoration: none !important; }
 }
-@include media-breakpoint-up(sm) {
+@media (max-width: 768px) {
   h1 {
     font-size: 2em !important;
     line-height: 1.25 !important;
@@ -89,7 +88,7 @@ h1 {
   }
 }
 
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) {
   h1 {
     font-size: 2.2em !important;
     line-height: 1.15 !important;
@@ -100,7 +99,7 @@ h1 {
   }
 }
 
-@include media-breakpoint-up(lg) {
+@media (min-width: 992px) {
   h1 {
     font-size: 3em !important;
     line-height: 1.05 !important;
