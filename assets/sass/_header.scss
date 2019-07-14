@@ -1,4 +1,5 @@
-header {
+header#site-header {
+  @extend .no-print;
   grid-area: head;
   display: grid;
   min-height: 0.75in;
@@ -8,8 +9,29 @@ header {
   grid-area: brand;
   align-items: center;
   display: inline-flex;
+  a {
+    padding: 0.7em;
+    color: white;
+    text-decoration: none;
+  }
+  svg { height: 0.5in; }
+  @media (max-width: 768px) {
+    span { display: none; }
+    justify-content: center;
+  }
 }
 nav {
+  @extend .no-print;
+  a {
+    padding: 0.7em;
+    color: rgba(#FFFFFF,0.7);
+    text-decoration: none;
+    &:hover, &:active {
+      color: white;
+    }
+  }
+}
+nav#site-navbar {
   grid-area: navbar;
   align-items: center;
   justify-content: center;
@@ -18,13 +40,5 @@ nav {
     list-style: none;
     display: inline-flex;
     margin: 0 0.5em;
-    a {
-      padding: 0.7em;
-      color: rgba(#FFFFFF,0.7);
-      text-decoration: none;
-      &:hover, &:active {
-        color: white;
-      }
-    }
   }
 }

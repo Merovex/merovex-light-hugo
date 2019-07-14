@@ -1,0 +1,17 @@
+@media print {
+  .print-logo {
+    display: block;
+    svg { height: 0.7in; fill: $primary-color; }
+    color: $primary-color;
+    text-align: center;
+    font-size: 0.5in;
+  }
+  #copyright {
+    font-size: 0.8;
+    color: black;
+  }
+  article, section, aside, figure, header {
+    display: block;
+  }
+  .no-print { display: none; }
+}

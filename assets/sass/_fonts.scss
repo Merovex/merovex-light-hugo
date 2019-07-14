@@ -54,9 +54,10 @@ h4 {
     font-family: var(--font-family-sans-serif);
   }
 }
-#brand {
+#brand, #footer-brand h3 {
   font-family: Montserrat;
   font-size: 1.3em;
+  font-weight: normal;
 }
 .badge, .btn { font-family: var(--font-family-sans-serif); }
 h1 {
@@ -143,4 +144,7 @@ h1 {
     line-height: 1.25 !important;
     margin-top: 1em;
   }
+}
+.lead {
+  font-size: 1.25rem;
 }

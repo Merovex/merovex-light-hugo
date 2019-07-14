@@ -1,14 +1,20 @@
 // // HERE
 @import "vars";
+@import "theme";
+@import "badge";
 @import "fonts";
 @import "reboot"; //  Bootstrap's reboot
 @import "grid";
+@import "single";
 @import "temp";
 @import "header";
+@import "print";
 @import "footer";
-@import "theme";
 
 main {
   grid-area: main;
-  padding-top: 0.5in;
+  margin: 0.3in 0;
+}
+.print-logo {
+  display: none;
 }
