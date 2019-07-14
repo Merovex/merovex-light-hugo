@@ -1,0 +1,27 @@
+{{ define "main" }}{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+<main class="list">
+  <nav id='pagination' aria-label='Post pagination'>{{ template "_internal/pagination.html" . }}</nav>
+  <div class="row">{{ range $paginator.Pages }}
+    <div class="col-md-4 d-flex">
+      <article>
+        <img src="/images/articles/{{ .Params.photo.image }}" alt="">
+        <div class="card-body">
+          <h4><small>{{ range .Params.categories }}<a href="/categories/{{ . | urlize }}">{{ . |title }}</a> {{ end }}</small><a href="{{.Permalink}}">{{.Title}}</a></h4>
+          <p class="card-text description">
+            <time datetime="{{.Date}}">{{ dateFormat "2 Jan 2006" .Date }}.</time> {{.Description}}
+          </p>
+          {{ if isset .Params "tags" }}<p class='text-center'>
+              {{ range .Params.tags }}<span class='badge badge-primary' href="/tags/{{ . | urlize }}">{{ .|title  }}</span> {{ end }}
+          {{ end }}</p>
+        </div>
+        <div class="card-footer bg-transparent">
+          <p class='text-center'><a class="btn btn-outline-primary" href="{{ .Permalink }}">Read more</a></p>
+        </div>
+      </article>
+    </div>
+    {{end}}
+  </div>
+  <nav id='bottom-pagination' aria-label='Post pagination'>{{ template "_internal/pagination.html" . }}</nav>
+</main>
+{{- partial "footer.html" . -}}
+{{end}}

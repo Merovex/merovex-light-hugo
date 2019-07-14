@@ -4,5 +4,5 @@ a.badge {
   font-size: 0.8em;
 }
 .badge-secondary {
-  background: $primary-color;
+  background: var(--primary-color);
 }

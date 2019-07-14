@@ -13,6 +13,7 @@ header#site-header {
     padding: 0.7em;
     color: white;
     text-decoration: none;
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
   }
   svg { height: 0.5in; }
   @media (max-width: 768px) {

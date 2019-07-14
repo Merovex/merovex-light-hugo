@@ -1,8 +1,8 @@
 @media print {
   .print-logo {
     display: block;
-    svg { height: 0.7in; fill: $primary-color; }
-    color: $primary-color;
+    svg { height: 0.7in; fill: var(--primary-color); }
+    color: var(--primary-color);
     text-align: center;
     font-size: 0.5in;
   }

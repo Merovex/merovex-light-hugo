@@ -1,4 +1,7 @@
-// // HERE
+@mixin hover-darkness() {
+  &:hover{ filter: brightness(85%); }
+}
+
 @import "vars";
 @import "theme";
 @import "badge";
@@ -8,7 +11,9 @@
 @import "single";
 @import "temp";
 @import "header";
+@import "pagination";
 @import "print";
+@import "cards";
 @import "footer";
 
 main {

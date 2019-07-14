@@ -1,36 +1,87 @@
-$brand-hue:     219;
+html {
+  --hue:                 219;
+  --accent-hue:          36;
 
-$violet:        hsl(290, 70%, 50%);
-$indigo:        hsl(270, 70%, 60%); // 270
-$blue:          hsl(240, 80%, 50%); // 240
-$cyan:          hsl(180, 50%, 40%); // 180
-$green:         hsl(120, 70%, 30%); //
-$yellow:        hsl(60,  70%, 60%);
-$orange:        hsl(36,  60%, 50%);
-$red:           hsl(5,   60%, 50%);
-$facebook:      hsl(221, 60%, 66%); // #3b5998
-$twitter:       hsl(207, 80%, 66%); // #71b7f0
-$google:        hsl(7, 65%, 66%);   // #d34836
+  --violet:            hsl(290, 70%, 50%);
+  --indigo:            hsl(270, 70%, 60%); // 270
+  --blue:              hsl(240, 80%, 50%); // 240
+  --cyan:              hsl(180, 50%, 40%); // 180
+  --green:             hsl(120, 70%, 30%); //
+  --yellow:            hsl(60,  70%, 60%);
+  --orange:            hsl(36,  60%, 50%);
+  --red:               hsl(5,   60%, 50%);
+  --facebook:          hsl(221, 60%, 66%); // #3b5998
+  --twitter:           hsl(207, 80%, 66%); // #71b7f0
+  --google:            hsl(7, 65%, 66%);   // #d34836
+}
 
-$primary-color: hsl($brand-hue, 30%, 35%);
-$body-bg:       hsl($brand-hue, 13%, 98%);
-$body-color:    hsl($brand-hue, 20%, 20%);
+// @media (prefers-color-scheme: light) {
+  html {
+    --primary-color:       hsl(var(--hue), 30%, 35%);
+    --background:          hsl(var(--hue), 13%, 98%);
+    --text-color-normal:   hsl(var(--hue), 20%, 20%);
+    --text-color-disabled: hsl(var(--hue), 20%, 50%);
+    --text-color-header:   var(--primary-color);
+
+    --link-color:          var(--blue);
+  }
+// }
 
 @media (prefers-color-scheme: dark) {
-  $primary-color: hsl($brand-hue, 30%, 25%);
-  $body-color:    hsl($brand-hue, 13%, 98%);
-  $body-bg:       hsl($brand-hue, 20%, 20%);
+  html {
+    --primary-color:       hsl(var(--hue), 30%, 45%);
+    --background:          hsl(var(--hue), 13%, 25%);
+    --text-color-normal:   hsl(var(--hue), 20%, 90%);
+    --text-color-disabled: hsl(var(--hue), 20%, 60%);
+    --text-color-header:   hsl(var(--hue), 20%, 90%);
+    --link-color:          hsl(var(--hue), 70%, 100%);
+
+    --blue:              hsl(240, 90%, 80%);
+  }
 }
 
+
+html {
+  // Category
+  --cat:                         var(--primary-color);
+  --cat-philosophy:              var(--green);
+  --cat-technology:              var(--cyan);
+  --cat-writing:                 var(--red);
+  --cat-writing-craft:           var(--violet);
+  --cat-writing-on-github:       var(--orange);
+}
+html {
+  // pagination
+  --pg-border-color:           #CCC;
+
+  --pg-bg-hover:               var(--orange);
+  --pg-color-hover:            white;
+  --pg-border-hover:           darken(var(--orange), 20%);
+
+  --pg-bg-active:              var(--primary-color);
+  --pg-color-active:           white;
+  --pg-border-active:          var(--pg-border-color);
+
+  --pg-bg-disabled:            #DDD;
+  --pg-color-disabled:         #333;
+  --pg-border-disabled:        var(--pg-border-color);
+}
+// }
+
 body {
-  background: $body-bg;
-  color: $body-color;
+  color: var(--text-color-normal);
+  background: var(--background) !important;
+  a { color: var(--blue); @include hover-darkness; }
+  @media (prefers-color-scheme: dark) {
+    strong { filter: brightness(150%); }
+    img    { filter: brightness(80%);}
+  }
 }
 header#site-header,
-footer {
+footer#site-footer {
   color: white;
-  background: $primary-color;
+  background: var(--primary-color)
 }
 main {
-  background: $body-bg;
+
 }

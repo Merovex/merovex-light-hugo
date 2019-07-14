@@ -1,0 +1,98 @@
+_a11y.scss:  background-color: #f1f1f1;
+_a11y.scss:  color: #21759b;
+_badge.scss:  background: $primary-color;
+_cards.scss:@mixin hoverbg($bg-color,$pct) {
+_cards.scss:  background: $bg-color;
+_cards.scss:    background: darken($bg-color, $pct);
+_cards.scss:    color: #5d5e5e;
+_cards.scss:    // @media (prefers-color-scheme: dark) {
+_cards.scss:      color: white;
+_cards.scss:      border-color: #777;
+_cards.scss:      color: #fff;
+_cards.scss:      @include hoverbg($primary-color,20%)
+_cards.scss:      a { text-decoration: none; color: white; }
+_color.scss:$primary-color: hsl(219, 30%, 35%);
+_color.scss:  --primary-color:         hsl(219, 30%, 35%);
+_color.scss:  --primary-color-light:   hsl(219, 30%, 45%);
+_color.scss:  --primary-color-dark:    hsl(219, 30%, 30%);
+_color.scss:  --primary-color-darker:  hsl(219, 25%, 25%);
+_color.scss:  --primary-color-darkest: hsl(219, 20%, 20%);
+_cookie-notice.scss:  color: rgba(255,255,255,0.8);
+_cookie-notice.scss:    color: white !important;
+_cookie-notice.scss:      color: white !important;
+_footer.scss:    color: rgba(#FFF, 0.8);
+_footer.scss:    &:hover { color: white; }
+_header.scss:    color: white;
+_header.scss:    color: rgba(#FFFFFF,0.7);
+_header.scss:      color: white;
+_pagination.scss:$hover-color: white;
+_pagination.scss:$active-color: white;
+_pagination.scss:$active-bg: $primary-color;
+_pagination.scss:$active-border: darken($primary-color, 10%);
+_pagination.scss:$disabled-color: #333;
+_pagination.scss:      color: $color;
+_pagination.scss:      background-color: $body-bg;
+_pagination.scss:        color: $hover-color;
+_pagination.scss:        background-color: $hover-bg;
+_pagination.scss:        border-color: $hover-border;
+_pagination.scss:      color: $active-color;
+_pagination.scss:      background-color: $active-bg;
+_pagination.scss:      border-color: $active-border;
+_pagination.scss:      color: $disabled-color;
+_pagination.scss:      background-color: $disabled-bg;
+_pagination.scss:      border-color: $disabled-border;
+_print.scss:    svg { height: 0.7in; fill: $primary-color; }
+_print.scss:    color: $primary-color;
+_print.scss:    color: black;
+_reboot.scss:  -webkit-tap-highlight-color: rgba(black, 0); // 5
+_reboot.scss:// 2. As a best practice, apply a default `background-color`.
+_reboot.scss:  color: inherit;
+_reboot.scss:  outline: 5px auto -webkit-focus-ring-color;
+_reboot.scss:// 2. Correct the color inheritance from `fieldset` elements in IE.
+_reboot.scss:  color: inherit; // 2
+_single.scss:    color: #ccc;
+_single.scss:      color: rgba(#FFF, 0.7) !important;
+_single.scss:        color: white !important;
+_single.scss:          color:       $primary-color !important;
+_single.scss:      color: $primary-color;
+_temp.scss://   color: white;
+_temp.scss://   color: white;
+_temp.scss://   color: white;
+_theme.scss:$primary-color: hsl($brand-hue, 30%, 35%);
+_theme.scss:$color:    hsl($brand-hue, 20%, 20%);
+_theme.scss:// @media (prefers-color-scheme: dark) {
+_theme.scss:  $primary-color: hsl($brand-hue, 30%, 25%);
+_theme.scss:  $color:    hsl($brand-hue, 13%, 98%);
+_theme.scss:  color: $color;
+_theme.scss:  color: white;
+_theme.scss:  background: $primary-color;
+_a11y.scss:  background-color: #f1f1f1;
+_badge.scss:  background: $primary-color;
+_cards.scss:  background: $bg-color;
+_cards.scss:    background: darken($bg-color, $pct);
+_color.scss:  background: var(--white) !important;
+_cookie-notice.scss:  background: #222;
+_footer.scss:    background: rgba(0,0,0,0.3);
+_pagination.scss:      background-color: $body-bg;
+_pagination.scss:        background-color: $hover-bg;
+_pagination.scss:      background-color: $active-bg;
+_pagination.scss:      background-color: $disabled-bg;
+_reboot.scss:// 2. As a best practice, apply a default `background-color`.
+_reboot.scss:// Work around a Firefox/IE bug where the transparent `button` background
+_single.scss:    background: rgba(0, 0, 0, 0.6);
+_temp.scss://   background: purple;
+_temp.scss://   background: blue;
+_temp.scss://   background: green;
+_theme.scss:  background: $body-bg;
+_theme.scss:  background: $primary-color;
+_theme.scss:  background: $body-bg;
+colors.css:_a11y.scss:  background-color: #f1f1f1;
+colors.css:_badge.scss:  background: $primary-color;
+colors.css:_cards.scss:  background: $bg-color;
+colors.css:_cards.scss:    background: darken($bg-color, $pct);
+colors.css:_pagination.scss:      background-color: $body-bg;
+colors.css:_pagination.scss:        background-color: $hover-bg;
+colors.css:_pagination.scss:      background-color: $active-bg;
+colors.css:_pagination.scss:      background-color: $disabled-bg;
+colors.css:_reboot.scss:// 2. As a best practice, apply a default `background-color`.
+colors.css:_theme.scss:  background: $primary-color;

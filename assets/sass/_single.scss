@@ -31,14 +31,19 @@ figure#article-image {
 }
 
 article#single {
-  article, section, aside, figure, header {
-    // border: 1px solid red;
-  }
-  // border: 1px solid green;
   display: grid;
   grid-gap: 1em;
   header {
     grid-area: title;
+  }
+  pre {
+    max-width: 8in;
+    overflow: scroll;
+    border: 1px solid #999;
+    padding: 1em;
+    code {
+      width: 100%;
+    }
   }
   aside#metadata {
     @extend .no-print;
@@ -60,12 +65,12 @@ article#single {
           line-height: 0.7;
           margin-top: 7px;
           padding-right: 4px;
-          color:       $primary-color !important;
+          color:       var(--primary-color) !important;
           font-family: var(--font-family-serif);
       }
     }
     h2, h3 {
-      color: $primary-color;
+      color: var(--text-color-header);
     }
     h2 {
       font-family: var(--font-family-serif);
