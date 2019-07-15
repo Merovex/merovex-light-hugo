@@ -33,6 +33,7 @@ figure#article-image {
 article#single {
   display: grid;
   grid-gap: 1em;
+  margin: 0.3in 0;
   header {
     grid-area: title;
   }

@@ -15,10 +15,10 @@
 @import "print";
 @import "cards";
 @import "footer";
+@import "hero";
 
 main {
   grid-area: main;
-  margin: 0.3in 0;
 }
 .print-logo {
   display: none;
