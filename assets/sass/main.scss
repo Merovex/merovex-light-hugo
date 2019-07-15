@@ -3,10 +3,10 @@
 }
 
 @import "vars";
+@import "reboot"; //  Bootstrap's reboot
 @import "theme";
 @import "badge";
 @import "fonts";
-@import "reboot"; //  Bootstrap's reboot
 @import "grid";
 @import "single";
 @import "temp";
