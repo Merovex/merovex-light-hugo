@@ -1,5 +1,8 @@
+// Blue = 219
+// Redish = 340
+
 html {
-  --hue:                 219;
+  --hue:                 340;
   --accent-hue:          36;
 
   --violet:            hsl(290, 70%, 50%);
@@ -17,7 +20,7 @@ html {
 
 // @media (prefers-color-scheme: light) {
   html {
-    --primary-color:       hsl(var(--hue), 30%, 35%);
+    --primary-color:       hsl(var(--hue), 30%, 40%);
     --background:          hsl(var(--hue), 13%, 98%);
     --text-color-normal:   hsl(var(--hue), 20%, 20%);
     --text-color-disabled: hsl(var(--hue), 20%, 50%);

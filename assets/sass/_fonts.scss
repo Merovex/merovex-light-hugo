@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Open+Sans|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat");
+// @import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Open+Sans|Montserrat");
 @font-face {
     font-family: 'Libre Caslon Display';
     src: url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.eot');
@@ -24,7 +25,7 @@
 
 $font-size-base: 1.125rem;
 :root {
-  --font-family-sans-serif:  "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif:  "Libre Franklin", "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-serif: "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-header: 'Libre Caslon Display', "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-print:  Bookerly, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
