@@ -1,14 +1,14 @@
 {{ define "main" }}{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
 <main class="list">
   <nav id='pagination' aria-label='Post pagination'>
-    {{ template "_internal/pagination.html" . }}
+    {{ partial "pagination.html" . }}
   </nav>
   <section class="cards">
     {{ range $paginator.Pages }}{{- partial "list-card.html" . -}}
     {{end}}
   </section>
   <nav id='bottom-pagination' aria-label='Post pagination'>
-    {{ template "_internal/pagination.html" . }}
+    {{ partial "pagination.html" . }}
   </nav>
 </main>
 {{- partial "footer.html" . -}}

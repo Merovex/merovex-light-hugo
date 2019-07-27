@@ -1,5 +1,14 @@
-@mixin hover-darkness() {
-  &:hover{ filter: brightness(85%); }
+@mixin hover-darkness($amt:70%) {
+  &:hover{ filter: brightness($amt); }
+  @media (prefers-color-scheme: dark) {
+    &:hover{ filter: brightness(130%); }
+  }
+}
+@mixin border-shade($color) {
+  border-color: darken($color, 15%);
+  @media (prefers-color-scheme: dark) {
+    border-color: lighten($color, 15%);
+  }
 }
 
 @import "vars";
@@ -19,8 +28,21 @@
 
 main {
   grid-area: main;
-  
 }
 .print-logo {
   display: none;
+}
+table {
+  width: 100%;
+  font-size: 0.95rem;
+  tr {
+    border-top: 1px solid;
+    @include border-shade($bg-color);
+    td, th {
+      padding: 0.5em 0;
+    }
+    th {
+      font-weight: bold;
+    }
+  }
 }

@@ -24,13 +24,14 @@ $border-color: #CCC;
     display: flex;
     flex-direction: column;
     position: relative;
-    border-color: $border-color;
+    @include border-shade($bg-color);
     color: var(--white);
     .thumbnail img {
       width: 100%;
       height: 150px;
       object-fit: cover;
       border: 1px solid $border-color;
+      @include border-shade($bg-color);
     }
     section {
       display: flex;
@@ -55,27 +56,25 @@ $border-color: #CCC;
       font-size: .75rem;
       text-transform: uppercase;
       box-shadow: 0.2em 0.2em 1em rgba(#000, 0.4);
-      background:   var(--cat);
-      @include hover-darkness;
+      background: $primary-color;
+      opacity: 0.9;
+      &:hover {
+        opacity: 1;
+      }
       &.philosophy        {
-        background: var(--cat-philosophy);
-        @include hover-darkness;
+        background: adjust-hue($primary-color, 60deg);
       }
       &.technology        {
-        background: var(--cat-technology);
-        @include hover-darkness;
+        background: adjust-hue($primary-color, 120deg);
       }
       &.writing           {
-        background: var(--cat-writing);
-        @include hover-darkness;
+        background: adjust-hue($primary-color, 180deg);
       }
       &.writing-craft     {
-        background: var(--cat-writing-craft);
-        @include hover-darkness;
+        background: adjust-hue($primary-color, 240deg);
       }
       &.writing-on-github {
-        background: var(--cat-writing-on-github);
-        @include hover-darkness;
+        background: adjust-hue($primary-color, 150deg);
       }
       a { text-decoration: none; color: var(--white); }
     }

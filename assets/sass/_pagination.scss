@@ -1,85 +1,31 @@
-//
-// Pagination (multiple pages)
-// --------------------------------------------------
-$border-radius-base: 4px;
-$padding-base-vertical: 0.5em;
-$padding-base-horizontal: 0.5em;
-$line-height-base: 1.5;
-$cursor-disabled: pointer;
-
-#pagination, #bottom-pagination {
-  display: block;
+ul.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   text-align: center;
-}
-
-.pagination {
-  display: inline-block;
-  padding-left: 0;
-  margin: 1em 0;
-  border-radius: $border-radius-base;
-
-  > li {
-    display: inline; // Remove list-style and block-level defaults
-    > a,
-    > span {
-      position: relative;
-      float: left; // Collapse white-space
-      padding: $padding-base-vertical $padding-base-horizontal;
-      margin-left: -1px;
-      line-height: $line-height-base;
-      text-decoration: none;
-      color: var(--text-color-normal);
-      background-color: var(--background);
-      border: 1px solid var(--pg-border-color);
-
-      &:hover,
-      &:focus {
-        z-index: 2;
-        color:            var(--pg-color-hover);
-        background-color: var(--pg-bg-hover);
-        border-color:     var(--pg-border-hover);
+  font-size: 1em;
+  padding: 2em 0;
+  li {
+    list-style: none;
+    margin: 0 0.2em;
+    a {
+      color: $accent-color;
+      border: 1px solid #DDD;
+      @include border-shade($bg-color);
+      border-radius: 0.5em;
+      &:hover {
+        background-color: $primary-color;
+        color: #FFF !important;
+        @include border-shade($primary-color);
+        @include hover-darkness(100%);
       }
     }
-    &:first-child {
-      > a,
-      > span {
-        margin-left: 0;
-        border-top-left-radius:    $border-radius-base;
-        border-bottom-left-radius: $border-radius-base;
+    &.active {
+      a {
+        @include border-shade($accent-color);
+        background-color: $accent-color;
+        color: #FFF !important;
       }
-    }
-    &:last-child {
-      > a,
-      > span {
-        border-top-right-radius:    $border-radius-base;
-        border-bottom-right-radius: $border-radius-base;
-      }
-    }
-  }
-
-  > .active > a,
-  > .active > span {
-    &,
-    &:hover,
-    &:focus {
-      z-index: 3;
-      cursor: default;
-      color:            var(--pg-color-active);
-      background-color: var(--pg-bg-active);
-      border-color:     var(--pg-border-active);
-    }
-  }
-
-  > .disabled {
-    > span,
-    > span:hover,
-    > span:focus,
-    > a,
-    > a:hover,
-    > a:focus {
-      color:            var(--pg-color-disabled);
-      background-color: var(--pg-bg-disabled);
-      border-color:     var(--pg-border-disabled);
     }
   }
 }
