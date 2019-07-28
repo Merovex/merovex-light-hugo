@@ -1,18 +1,19 @@
 @mixin hover-darkness($amt:70%) {
   &:hover{ filter: brightness($amt); }
-  @media (prefers-color-scheme: dark) {
+  // @media (prefers-color-scheme: dark) {
     &:hover{ filter: brightness(130%); }
-  }
+  // }
 }
-@mixin border-shade($color) {
-  border-color: darken($color, 15%);
+@mixin border-shade($color:$gray-30) {
+  border-color: grayscale(darken($color, 10%));
   @media (prefers-color-scheme: dark) {
-    border-color: lighten($color, 15%);
+    border-color: $gray-50;
   }
 }
 
 @import "vars";
 @import "reboot"; //  Bootstrap's reboot
+@import "theme-color";
 @import "theme";
 @import "badge";
 @import "fonts";
@@ -35,6 +36,10 @@ main {
 table {
   width: 100%;
   font-size: 0.95rem;
+  margin: 2em 0;
+  caption {
+    font-size: 0.8em;
+  }
   tr {
     border-top: 1px solid;
     @include border-shade($bg-color);

@@ -1,0 +1,77 @@
+$hue: 207;
+// Analogous
+$accent-hue: 30;
+// Triad
+// $accent-hue: 120;
+// Split
+// $accent-hue: 150;
+// Complementary
+// $accent-hue: 180;
+
+$primary-10: hsl($hue,  5, 99);
+$primary-20: hsl($hue, 20, 98);
+$primary-30: hsl($hue, 30, 95);
+$primary-40: hsl($hue, 40, 90);
+$primary-50: hsl($hue, 50, 80);
+$primary-60: hsl($hue, 55, 70);
+$primary-70: hsl($hue, 60, 60);
+$primary-80: hsl($hue, 55, 45);
+$primary-90: hsl($hue, 50, 30);
+$primary-00: hsl($hue, 40, 20);
+
+$secondary-10: hsl($hue + $accent-hue,  5, 99);
+$secondary-20: hsl($hue + $accent-hue, 20, 98);
+$secondary-30: hsl($hue + $accent-hue, 30, 95);
+$secondary-40: hsl($hue + $accent-hue, 40, 90);
+$secondary-50: hsl($hue + $accent-hue, 50, 80);
+$secondary-60: hsl($hue + $accent-hue, 55, 70);
+$secondary-70: hsl($hue + $accent-hue, 60, 60);
+$secondary-80: hsl($hue + $accent-hue, 55, 45);
+$secondary-90: hsl($hue + $accent-hue, 50, 30);
+$secondary-00: hsl($hue + $accent-hue, 40, 20);
+
+$ternary-10:   hsl($hue - $accent-hue,  5, 99);
+$ternary-20:   hsl($hue - $accent-hue, 20, 98);
+$ternary-30:   hsl($hue - $accent-hue, 30, 95);
+$ternary-40:   hsl($hue - $accent-hue, 40, 90);
+$ternary-50:   hsl($hue - $accent-hue, 50, 80);
+$ternary-60:   hsl($hue - $accent-hue, 55, 70);
+$ternary-70:   hsl($hue - $accent-hue, 60, 60);
+$ternary-80:   hsl($hue - $accent-hue, 55, 45);
+$ternary-90:   hsl($hue - $accent-hue, 50, 30);
+$ternary-00:   hsl($hue - $accent-hue, 40, 20);
+
+// Light
+$primary:        $primary-90;
+$secondary:      $secondary-90;
+$ternary:        $ternary-90;
+// Dark
+$primary-dark:   $primary-60;
+$secondary-dark: $secondary-60;
+$ternary-dark:   $ternary-60;
+
+$gray-10: grayscale($primary-10);
+$gray-20: grayscale($primary-20);
+$gray-30: grayscale($primary-30);
+$gray-40: grayscale($primary-40);
+$gray-50: grayscale($primary-50);
+$gray-60: grayscale($primary-60);
+$gray-70: grayscale($primary-70);
+$gray-80: grayscale($primary-80);
+$gray-90: grayscale($primary-90);
+$gray-00: grayscale($primary-00);
+
+
+$violet:            hsl(290, 70%, 50%);
+$indigo:            hsl(270, 70%, 60%); // 270
+$blue:              hsl(240, 80%, 50%); // 240
+$cyan:              hsl(180, 50%, 40%); // 180
+$green:             hsl(120, 70%, 30%); //
+$yellow:            hsl(60,  70%, 60%);
+$orange:            hsl(36,  60%, 50%);
+$red:               hsl(5,   60%, 50%);
+$facebook:          hsl(221, 60%, 66%); // #3b5998
+$twitter:           hsl(207, 80%, 66%); // #71b7f0
+$google:            hsl(7, 65%, 66%);   // #d34836
+$fg-color:          hsl($hue, 11, 11);
+$bg-color:          hsl($hue, 100, 99);

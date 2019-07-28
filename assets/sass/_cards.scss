@@ -1,5 +1,7 @@
-
-$border-color: #CCC;
+@mixin cat-color($color) {
+  background: $color;
+  &:hover { background: lighten($color, 20); }
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -24,14 +26,13 @@ $border-color: #CCC;
     display: flex;
     flex-direction: column;
     position: relative;
-    @include border-shade($bg-color);
-    color: var(--white);
+    @include border-shade();
     .thumbnail img {
       width: 100%;
       height: 150px;
       object-fit: cover;
-      border: 1px solid $border-color;
-      @include border-shade($bg-color);
+      border: 1px solid;
+      @include border-shade();
     }
     section {
       display: flex;
@@ -39,7 +40,7 @@ $border-color: #CCC;
       flex: 1;
     }
     aside {
-      border-top: 2px solid $border-color;
+      border-top: 2px solid;
       margin: .5rem 0 0;
       min-height: 30px;
       font-size: .8rem;
@@ -56,27 +57,14 @@ $border-color: #CCC;
       font-size: .75rem;
       text-transform: uppercase;
       box-shadow: 0.2em 0.2em 1em rgba(#000, 0.4);
-      background: $primary-color;
-      opacity: 0.9;
-      &:hover {
-        opacity: 1;
-      }
-      &.philosophy        {
-        background: adjust-hue($primary-color, 60deg);
-      }
-      &.technology        {
-        background: adjust-hue($primary-color, 120deg);
-      }
-      &.writing           {
-        background: adjust-hue($primary-color, 180deg);
-      }
-      &.writing-craft     {
-        background: adjust-hue($primary-color, 240deg);
-      }
-      &.writing-on-github {
-        background: adjust-hue($primary-color, 150deg);
-      }
-      a { text-decoration: none; color: var(--white); }
+      @include cat-color($secondary);
+
+      &.philosophy        { @include cat-color(adjust-hue($secondary, 60deg));  }
+      &.technology        { @include cat-color(adjust-hue($secondary, 120deg)); }
+      &.writing           { @include cat-color(adjust-hue($secondary, 180deg)); }
+      &.writing-craft     { @include cat-color(adjust-hue($secondary, 240deg)); }
+      &.writing-on-github { @include cat-color(adjust-hue($secondary, 300deg)); }
+      a { text-decoration: none; color: $primary-10; }
     }
   }
 }
