@@ -4,10 +4,10 @@
     &:hover{ filter: brightness(130%); }
   // }
 }
-@mixin border-shade($color:$gray-30) {
+@mixin border-shade($color:#777) {
   border-color: grayscale(darken($color, 10%));
   @media (prefers-color-scheme: dark) {
-    border-color: $gray-50;
+    // border-color: $gray-50;
   }
 }
 
@@ -42,7 +42,7 @@ table {
   }
   tr {
     border-top: 1px solid;
-    @include border-shade($bg-color);
+    @include border-shade($background);
     td, th {
       padding: 0.5em 0;
     }

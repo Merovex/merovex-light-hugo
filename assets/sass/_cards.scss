@@ -57,14 +57,14 @@
       font-size: .75rem;
       text-transform: uppercase;
       box-shadow: 0.2em 0.2em 1em rgba(#000, 0.4);
-      @include cat-color($secondary);
-
-      &.philosophy        { @include cat-color(adjust-hue($secondary, 60deg));  }
-      &.technology        { @include cat-color(adjust-hue($secondary, 120deg)); }
-      &.writing           { @include cat-color(adjust-hue($secondary, 180deg)); }
-      &.writing-craft     { @include cat-color(adjust-hue($secondary, 240deg)); }
-      &.writing-on-github { @include cat-color(adjust-hue($secondary, 300deg)); }
-      a { text-decoration: none; color: $primary-10; }
+      // @include cat-color($secondary);
+      //
+      // &.philosophy        { @include cat-color(adjust-hue($secondary, 60deg));  }
+      // &.technology        { @include cat-color(adjust-hue($secondary, 120deg)); }
+      // &.writing           { @include cat-color(adjust-hue($secondary, 180deg)); }
+      // &.writing-craft     { @include cat-color(adjust-hue($secondary, 240deg)); }
+      // &.writing-on-github { @include cat-color(adjust-hue($secondary, 300deg)); }
+      // a { text-decoration: none; color: $primary-10; }
     }
   }
 }

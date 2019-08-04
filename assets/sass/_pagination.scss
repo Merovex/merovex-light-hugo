@@ -9,25 +9,25 @@ ul.pagination {
     list-style: none;
     margin: 0 0.2em;
     a {
-      color: $secondary;
+      // color: $secondary;
       @media (prefers-color-scheme: dark) {
-        color: $secondary-dark;
+        // color: $secondary-dark;
       }
       border-radius: 0.5em;
       border: 1px solid;
       @include border-shade();
       &:hover {
-        background-color: $ternary;
-        color: $gray-10 !important;
-        @include border-shade($ternary);
+        // background-color: $ternary;
+        // color: $gray-10 !important;
+        // @include border-shade($ternary);
         @include hover-darkness(100%);
       }
     }
     &.active {
       a {
-        @include border-shade($secondary);
-        background-color: $secondary;
-        color: $gray-10 !important;
+        // @include border-shade($secondary);
+        // background-color: $secondary;
+        // color: $gray-10 !important;
       }
     }
   }
