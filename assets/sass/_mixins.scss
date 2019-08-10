@@ -21,8 +21,7 @@
 }
 
 @mixin mobile { // Mobile & Tablet
-  @media only screen and (max-width: 767px) {
-    // border: 1px solid red !important;
+  @media only screen and (max-width: 768px) {
     @content;
   }
 }
@@ -31,21 +30,19 @@
     @content;
   }
 }
-@mixin tablet { // Laptop & up
-  @media only screen and (max-width: 992px) {
-    // border: 1px solid blue !important;
+@mixin laptop-up { // Laptop & up
+  @media only screen and (min-width: 1023px) {
     @content;
   }
 }
-@mixin laptop {
-  @media only screen and (max-width: 1200px) {
-    // border: 1px solid purple !important;
+@mixin desktop-up {
+  @media only screen and (min-width: 1439px) {
+    // border: 2px solid orange;
     @content;
   }
 }
-@mixin desktop {
-  @media only screen and (max-width: 2400px) {
-    // body { background: orange !important; }
+@mixin widescreen-up {
+  @media only screen and (min-width: 2000px) {
     @content;
   }
 }

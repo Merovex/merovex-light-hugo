@@ -59,14 +59,14 @@ h1 {
   font-weight: bold;
   a { text-decoration: none !important; }
 }
-@include laptop { // laptop & up
+@include laptop-up { // laptop & up
   h1 { font-size: 3em; line-height: 1.05; }
   h2 { font-size: 2.3em; line-height: 1.3; }
   h3 { font-size: 1.8em; line-height: 1.3; }
   h4 { font-size: 1.2em; line-height: 1.22; }
   blockquote { font-size: 1.5em; line-height: 1.46; }
 }
-@include tablet { // Tablet & up
+@include tablet-up { // Tablet & up
   h1 { font-size: 2.3em; line-height: 1.05; }
   h2 { font-size: 2.0em; line-height: 1.3; }
   h3 { font-size: 1.5em; line-height: 1.3; }

@@ -1,5 +1,5 @@
 $color-scheme-debug: dark;
-// $color-scheme-debug: debug;
+$color-scheme-debug: debug;
 $grid-debug: grid;
 // $grid-debug: debug; // grid is for production.
 
@@ -7,14 +7,31 @@ $grid-debug: grid;
 @import "normalize";
 @import "typography";
 @import "color";
-@import "light";
-@import "dark";
-@import "grid";
+
 @import "header";
-@import "gridless";
+@import "footer";
 
 html, body {
   .brand svg {
     height: 2em;
+  }
+}
+
+@media screen {
+  body {
+    background: $base3;
+    color: $base03;
+    @include dark-mode {
+      background: $base03;
+      color: $base3;
+    }
+  }
+  .print-logo { display: none; }
+  @supports not (display: $grid-debug) {
+    svg { height: 2em !important; }
+    body { width: 100%; }
+    header, main, footer, section { max-width: 50em; margin: 0 auto; }
+    img { max-width: 100% !important; }
+    main, footer { padding: 1em; }
   }
 }

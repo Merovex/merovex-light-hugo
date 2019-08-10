@@ -1,0 +1,89 @@
+footer {
+  background: $base03;
+  width: 100%;
+  @include dark-mode {
+    background: $base01;
+  }
+  color: $base3;
+  a { color: $base2; }
+  nav, h3, form { margin: 0 1em; width: 90%; }
+  #footer-brand {
+    grid-area: fbrand;
+    text-align: center;
+    h3 {
+      width: 8em;
+      margin: 0 auto;
+      font-size: 2em;
+      svg { height: 3rem !important;
+        display: inline-block;
+        float: left;
+        padding-right: 0.2em;
+      }
+    }
+  }
+  #footer-cta   { grid-area: fcta; }
+  #footer-links {
+    grid-area: flinks;
+    ul { padding: 0;
+      li {
+        margin-left: 1em;
+      }
+    }
+  }
+  #copyright {
+    grid-area: copy;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    margin-top: 2em;
+    padding: 0.5em;
+    font-size: 0.8em;
+  }
+  @include grid {
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-content: space-around;
+    @include tablet-up {
+      margin-top: 0.25in;
+      padding-top: 0.25in;
+      grid-template-columns: 2fr 3fr;
+      grid-template-areas:
+        " fbrand fcta "
+        " flinks fcta "
+        " copy copy";
+    }
+    @include laptop-up {
+      margin-top: 0.5in;
+      padding-top: 0.5in;
+      grid-template-columns: 3fr 2fr 4fr;
+      grid-template-areas:
+        "fbrand flinks fcta"
+        "copy copy copy";
+    }
+    @include desktop-up {
+      grid-template-columns: 1fr 3fr 4fr 1fr;
+      grid-template-areas:
+        "... fbrand fcta ..."
+        "... flinks fcta ..."
+        "copy copy copy copy";
+    }
+    @include widescreen-up {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "... fbrand fcta ..."
+        "... flinks fcta ..."
+        "copy copy copy copy";
+    }
+    @include mobile {
+      margin-top: 0.25in;
+      padding-top: 2em;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "fcta"
+        "flinks"
+        "fbrand"
+        "copy";
+    }
+  }
+}
