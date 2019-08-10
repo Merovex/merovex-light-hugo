@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Franklin;Open+Sans;Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat");
+// @import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Open+Sans|Montserrat");
 @font-face {
     font-family: 'Libre Caslon Display';
-    src: url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.eot');
-    src: url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.woff2') format('woff2'),
-         url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.woff') format('woff'),
-         url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.ttf') format('truetype'),
-         url('/fonts/libre-caslon-display/librecaslontext-regular-webfont.svg#libre_caslon_textregular') format('svg');
+    src: url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.eot');
+    src: url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.woff') format('woff'),
+         url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.ttf') format('truetype'),
+         url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.svg#libre_caslon_textregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,7 +14,6 @@
     font-family: 'Libre Caslon';
     src: url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.eot');
     src: url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.woff2') format('woff2'),
          url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.woff') format('woff'),
          url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.ttf') format('truetype'),
          url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.svg#libre_caslon_textregular') format('svg');
@@ -24,7 +23,7 @@
 
 $font-size-base: 1.125rem;
 :root {
-  --font-family-sans-serif:  "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif:  "Libre Franklin", "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-serif: "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-header: 'Libre Caslon Display', "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-print:  Bookerly, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -54,19 +53,19 @@ h4 {
     font-family: var(--font-family-sans-serif);
   }
 }
-.navbar-brand {
+#brand, #footer-brand h3 {
   font-family: Montserrat;
-  // font-weight: bold;
   font-size: 1.3em;
+  font-weight: normal;
 }
 .badge, .btn { font-family: var(--font-family-sans-serif); }
 h1 {
   font-family: var(--font-family-header);
-  @extend .text-center;
+  text-align: center;
   font-weight: bold;
   a { text-decoration: none !important; }
 }
-@include media-breakpoint-up(sm) {
+@media (max-width: 768px) {
   h1 {
     font-size: 2em !important;
     line-height: 1.25 !important;
@@ -89,7 +88,7 @@ h1 {
   }
 }
 
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) {
   h1 {
     font-size: 2.2em !important;
     line-height: 1.15 !important;
@@ -100,7 +99,7 @@ h1 {
   }
 }
 
-@include media-breakpoint-up(lg) {
+@media (min-width: 992px) {
   h1 {
     font-size: 3em !important;
     line-height: 1.05 !important;
@@ -144,4 +143,7 @@ h1 {
     line-height: 1.25 !important;
     margin-top: 1em;
   }
+}
+.lead {
+  font-size: 1.25rem;
 }

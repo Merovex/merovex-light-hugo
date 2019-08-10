@@ -1,0 +1,30 @@
+blockquote {
+  &:before {
+      content: '\201C';
+      position: absolute;
+      top: 0.35em;
+      left: -0.25em;
+      line-height: 0;
+      color: text-contrast(darken($site-bg,1), $site-bg,2);
+      @include dark-mode {
+        color: text-contrast(lighten($site-fg,1), $site-fg,2);
+      }
+      text-shadow: none;
+      font-size: 16em;
+      z-index: -1;
+      font-family: var(--font-family-sans-serif);
+   }
+   position: relative;
+  font-style: italic;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  text-shadow: 0px 1px 2px $site-bg;
+  @include dark-mode {
+    text-shadow: 0px 1px 1px $site-fg;
+  }
+  blockquote {
+    &:before { content: ''; }
+    border: none;
+    padding: 0 0.5em;
+  }
+}

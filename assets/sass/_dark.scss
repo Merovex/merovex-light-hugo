@@ -1,0 +1,20 @@
+@include dark-mode {
+  body {
+    background: $base03;
+    color: $base3;
+    a {
+      color: $blue-dark;
+      &:visited {
+        color: $violet-dark;
+      }
+    }
+    strong {
+      color: $yellow;
+    }
+    table {
+      td, th {
+        border-bottom: 1px solid $base00;
+      }
+    }
+  }
+}

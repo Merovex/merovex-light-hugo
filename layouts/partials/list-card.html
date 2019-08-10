@@ -1,0 +1,13 @@
+    <article class="card">
+      <picture class="thumbnail">
+        <img src="/images/articles/{{ .Params.photo.image }}" alt="" />
+      </picture>
+      <section>{{ range .Params.categories }}
+        <span class="category {{ . | urlize }}"><a href="/categories/{{ . | urlize }}">{{ . |title }}  </a> {{ end }}</span>
+        <h4><a href="{{ .Permalink }}">{{.Title}}</a></h4>
+        <p>{{.Description}}</p>
+      </section><!-- .card-content -->
+      <aside>
+          <time datetime="{{.Date}}">{{ dateFormat "2 January 2006" .Date }}</time>
+      </aside>
+    </article>

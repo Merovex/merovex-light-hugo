@@ -1,23 +1,88 @@
+$bg: text-contrast($footer-bg, $site-bg);
 footer {
-  background:  var(--primary-color-light);
-  font-family: var(--font-family-sans-serif);
-  min-height: 3in;
-  position: relative;
-  margin: 0;
-  padding-top: 0.5in;
-  color: white;
-  svg {
-    height: 2em;
-    fill: white;
+  @extend .no-print;
+  background: $bg;
+  color: $base2;
+  svg { fill: $base2; }
+  nav, h3, form { margin: 0 1em; width: 90%; }
+  #footer-brand {
+    grid-area: fbrand;
+    text-align: center;
+    h3 {
+      width: 8em;
+      margin: 0 auto;
+      font-size: 2em;
+      svg { height: 3rem !important;
+        display: inline-block;
+        float: left;
+        padding-right: 0.2em;
+      }
+    }
   }
-  .copyright {
-    @extend .text-center;
-    background: var(--primary-color-dark);
-    color: rgba(white,0.4);
-    font-size: 0.9em;
+  #footer-cta   { grid-area: fcta; }
+  #footer-links {
+    grid-area: flinks;
+    ul { padding: 0;
+      li {
+        margin-left: 1em;
+        a {
+          color: text-contrast($site-link-color, $bg);
+        }
+      }
+    }
+  }
+  #copyright {
+    grid-area: copy;
+    background: darken($bg,10);
+    color: $base3;
+    text-align: center;
+    margin-top: 2em;
     padding: 0.5em;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    font-size: 0.8em;
+  }
+  @include grid {
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-content: space-around;
+    @include tablet-up {
+      padding-top: 0.25in;
+      grid-template-columns: 2fr 3fr;
+      grid-template-areas:
+        "fbrand fcta"
+        "flinks fcta"
+        "copy copy";
+    }
+    @include laptop-up {
+      padding-top: 0.5in;
+      grid-template-columns: 3fr 2fr 4fr;
+      grid-template-areas:
+        "fbrand flinks fcta"
+        "copy copy copy";
+    }
+    @include desktop-up {
+      grid-template-columns: 1fr 3fr 4fr 1fr;
+      grid-template-areas:
+        "... fbrand fcta ..."
+        "... flinks fcta ..."
+        "copy copy copy copy";
+    }
+    @include widescreen-up {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "... fbrand fcta ..."
+        "... flinks fcta ..."
+        "copy copy copy copy";
+    }
+    @include mobile {
+      padding-top: 2em;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "fcta"
+        "flinks"
+        "fbrand"
+        "copy";
+    }
   }
 }

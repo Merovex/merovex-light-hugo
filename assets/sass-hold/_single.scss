@@ -1,0 +1,50 @@
+
+
+article#single {
+  display: grid;
+  grid-gap: 1em;
+  margin: 0.3in 0;
+  header {
+    grid-area: title;
+  }
+  pre {
+    max-width: 8in;
+    overflow: scroll;
+    border: 1px solid #999;
+    padding: 1em;
+    code {
+      width: 100%;
+    }
+  }
+  aside#metadata {
+    @extend .no-print;
+    grid-area: meta;
+    text-align: center;
+  }
+
+  section#body {
+    line-height: 1.5;
+    grid-area: body;
+    section {
+      p:first-of-type {
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+      &>p:first-of-type:first-letter {
+          float: left;
+          font-size: 4rem;
+          line-height: 0.7;
+          margin-top: 7px;
+          padding-right: 4px;
+          color:       var(--primary-color) !important;
+          font-family: var(--font-family-serif);
+      }
+    }
+    h2, h3 {
+      color: var(--text-color-header);
+    }
+    h2 {
+      font-family: var(--font-family-serif);
+    }
+  }
+}

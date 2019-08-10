@@ -1,31 +1,63 @@
-@import "bootstrap-4.3.1/bootstrap";
+$color-scheme-debug: dark;
+$color-scheme-debug: debug;
+$grid-debug: grid;
+// $grid-debug: debug; // grid is for production.
+
+@import "mixins";
+@import "a11y";
 @import "color";
-@import "fonts";
-// Depends on abovle.
+@import "normalize";
+@import "typography";
+@import "badge";
 @import "cookie-notice";
-@import "navbar";
-@import "blockquote";
-@import "footer";
-@import "figure";
 @import "single";
-@import "list";
-@import "home";
-@import "toc";
-@import "404";
+@import "pagination";
+@import "cards";
+@import "header";
+@import "footer";
+@import "print";
 
 html, body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-  main {
-    min-height: calc(68.2vh);
+  .brand svg {
+    height: 2em;
   }
 }
-// @media (prefers-color-scheme: dark)
-// {
-// 	body {
-// 		background-color: #111 !important;
-// 	}
-// }
+
+@media screen {
+  body {
+    background: $site-bg;
+    color: text-contrast($site-fg, $site-bg);
+    a {
+      transition: background 0.2s;
+      transition: color 0.2s;
+      color: text-contrast($site-link-color, $site-bg);
+      &:hover {
+        color: text-contrast($site-link-hover-color, $site-bg);
+      }
+      &:visited {
+        color: text-contrast($site-link-visited-color, $site-bg);
+      }
+    }
+    @include dark-mode {
+      background: $site-fg;
+      color: text-contrast($site-bg, $site-fg);
+      a {
+        color: text-contrast($site-link-color, $site-fg);
+        &:hover {
+          color: text-contrast($site-link-hover-color, $site-fg);
+        }
+        &:visited {
+          color: text-contrast($site-link-visited-color, $site-fg);
+        }
+      }
+    }
+  }
+  .print-logo { display: none; }
+  @supports not (display: $grid-debug) {
+    svg { height: 2em !important; }
+    body { width: 100%; }
+    header, main, footer, section { max-width: 50em; margin: 0 auto; }
+    img { max-width: 100% !important; }
+    main, footer { padding: 1em; }
+  }
+}

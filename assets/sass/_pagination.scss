@@ -1,0 +1,40 @@
+$pagination-bg: $accent1;
+ul.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  padding: 2em 0;
+  li {
+    list-style: none;
+    margin: 0 0.2em;
+    a {
+      background: $pagination-bg;
+      color: text-contrast($base1, $pagination-bg,7);
+      width: 1.5em;
+      height: 1.5em;
+      display: inline-block;
+      border-radius: 0.3em;
+      border: 1px solid;
+      text-decoration: none;
+      border-color: darken($pagination-bg, 20%);
+      @include dark-mode {
+        border-color: lighten($pagination-bg, 20%);
+      }
+      &:hover {
+        background: lighten($pagination-bg, 20%);
+        color: text-contrast($base1, lighten($pagination-bg, 20%),7);
+      }
+    }
+    &.active {
+      a {
+        background: darken($pagination-bg, 20%);
+        &:hover {
+          background: darken($pagination-bg, 20%);
+          color: $base3;
+        }
+      }
+    }
+  }
+}

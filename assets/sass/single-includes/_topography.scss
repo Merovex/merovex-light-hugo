@@ -1,0 +1,17 @@
+h2, h3 {
+  color: text-contrast($article-h1, $site-bg);
+  @include dark-mode {
+    color: text-contrast($article-h1, $site-fg);
+  }
+}
+h2 {
+  font-family: var(--font-family-serif);
+}
+header {
+  color: text-contrast($article-h2, $site-bg);
+  @include dark-mode {
+    color: text-contrast($article-h2, $site-fg);
+  }
+}
+// article-h1
+// article-h2

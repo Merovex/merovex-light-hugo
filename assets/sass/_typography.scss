@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat");
+// @import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Open+Sans|Montserrat");
+@font-face {
+    font-family: 'Libre Caslon Display';
+    src: url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.eot');
+    src: url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.woff') format('woff'),
+         url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.ttf') format('truetype'),
+         url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.svg#libre_caslon_textregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Libre Caslon';
+    src: url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.eot');
+    src: url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.woff') format('woff'),
+         url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.ttf') format('truetype'),
+         url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.svg#libre_caslon_textregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-size-base: 1.2rem;
+:root {
+  --font-family-sans-serif:  "Libre Franklin", "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-serif: "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-header: 'Libre Caslon Display', "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-print:  Bookerly, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  font-size: $font-size-base !important;
+  font-family: var(--font-family-sans-serif);
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+}
+.header-font { font-family: var(--font-family-header); }
+.sans-font   { font-family: var(--font-family-sans-serif); }
+.serif-font  { font-family: var(--font-family-serif); }
+.lead { font-size: 1.3rem; }
+.badge, .btn { font-family: var(--font-family-sans-serif); }
+.brand { font-family: Montserrat; font-size: 1.3em; font-weight: normal; }
+h1, h2, h3, h4 {
+  font-family: var(--font-family-sans-serif);
+  margin-bottom: 0.4em;
+  margin-top: 1.2em;
+  small {
+    display: block;
+    font-size: 50%;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: var(--font-family-sans-serif);
+  }
+}
+h1 {
+  font-family: var(--font-family-header);
+  text-align: center;
+  font-weight: bold;
+  a { text-decoration: none !important; }
+}
+
+@include tablet-up { // Tablet & up
+  h1 { font-size: 2.3em; line-height: 1.05; }
+  h2 { font-size: 2.0em; line-height: 1.3; }
+  h3 { font-size: 1.5em; line-height: 1.3; }
+  h4 { font-size: 1.2em; line-height: 1.22; }
+  blockquote { font-size: 0.9em; line-height: 1.46; }
+}
+@include laptop-up { // laptop & up
+  h1 { font-size: 3em;   line-height: 1.05; }
+  h2 { font-size: 2.3em; line-height: 1.3; }
+  h3 { font-size: 1.8em; line-height: 1.3; }
+  h4 { font-size: 1.2em; line-height: 1.22; }
+  blockquote { font-size: 0.9em; line-height: 1.46; }
+}
+@include mobile { // Mobile
+  h1 { font-size: 2em !important; line-height: 1.3 !important; }
+  h2 { font-size: 1.65em !important; line-height: 1.15 !important; }
+  h3 { font-size: 1.38em !important; line-height: 1.15 !important; }
+  h4 { font-size: 1.2em !important; line-height: 1.22 !important; }
+  blockquote { font-size: 0.9em !important; line-height: 1.3 !important; }
+}
+@media print {
+  .print-logo {
+    font-size: 0.25in !important;
+    svg {
+      height: 0.25in !important;
+    }
+  }
+  body { font-size: 0.15in !important; font-family: var(--font-family-serif);}
+  h1 {
+    font-size: 0.4in !important;
+    line-height: 1.3 !important;
+    margin-top: 0;
+    small { display: none; }
+  }
+  h2 { font-size: 0.3in !important; line-height: 1.3 !important; margin-top: 0.5em; }
+  h3 { font-size: 0.25in !important; line-height: 1.3 !important; margin-top: 0.5em; }
+  h4 { font-size: 0.2in !important; line-height: 1.3 !important; margin-top: 0.5em; }
+  .lead { font-size: 0.15in !important; }
+}

@@ -1,0 +1,121 @@
+@mixin cat-color($color) {
+  a {
+    background: $color;
+    border: 1px solid darken($color, 20);
+    &:hover { background: darken($color, 20); }
+  }
+}
+.cards {
+  display: grid;
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 1em;
+  margin: 0 auto;
+  @include mobile {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+  @include tablet-up {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include laptop-up {
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  @include widescreen-up {
+    width: 1200px;
+  }
+
+  .card {
+    border: 1px solid text-contrast($card-bg, $site-bg);
+    box-shadow: 0.2em 0.2em 0.2em rgba(#000, 0.1);
+    background: $card-bg;
+    color: text-contrast($card-fg, $card-bg);
+    @include dark-mode {
+      border-color: text-contrast($card-fg, $site-fg);
+      background: $card-fg;
+      color: text-contrast($card-bg, $card-fg);
+    }
+    border-radius: 4px;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 97%;
+    .thumbnail img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border: 1px solid;
+      border-color: text-contrast($card-bg, $site-bg);
+      @include dark-mode {
+        border-color: text-contrast($card-bg, $site-fg);
+      }
+    }
+    h4 {
+      font-weight: normal;
+      text-align: center;
+      margin: 1em 0 0.5em 0;
+      a {
+        color: text-contrast($site-link-color, $card-bg);
+        &:visited {
+          color: text-contrast($site-link-visited-color, $card-bg);
+        }
+        &:hover {
+          color: text-contrast($site-link-hover-color, $card-bg);
+        }
+        @include dark-mode {
+          color: text-contrast($site-link-color, $card-fg);
+          &:visited {
+            color: text-contrast($site-link-visited-color, $card-fg);
+          }
+          &:hover {
+            color: text-contrast($site-link-hover-color, $card-fg);
+          }
+        }
+        text-decoration: none;
+      }
+      @media (prefers-color-scheme: dark) {
+        filter: brightness(130%);
+      }
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    aside {
+      border-top: 2px solid;
+      margin: .5rem 0 0;
+      min-height: 30px;
+      font-size: .8rem;
+      padding: 0.5rem 0;
+    }
+    .category {
+      position: absolute;
+      top: 110px;
+      left: -5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: .75rem;
+      text-transform: uppercase;
+      a {
+        color: $card-bg;
+        text-decoration: none;
+        padding: 1em 2em;
+        box-shadow: 0.2em 0.2em 1em rgba(#000, 0.6);
+        transition: background 0.2s;
+        transition: color 0.2s;
+        &:hover {
+          box-shadow: 0.1em 0.1em 0.5em rgba(#000, 0.8);
+        }
+      }
+      @include cat-color($secondary0);
+      &.philosophy        { @include cat-color(adjust-hue($secondary0, 50deg));  }
+      &.technology        { @include cat-color(adjust-hue($secondary0, 100deg)); }
+      &.worldbuilding     { @include cat-color(adjust-hue($secondary0, 150deg)); }
+      &.writing           { @include cat-color(adjust-hue($secondary0, 200deg)); }
+      &.writing-craft     { @include cat-color(adjust-hue($secondary0, 250deg)); }
+      &.writing-on-github { @include cat-color(adjust-hue($secondary0, 300deg)); }
+    }
+  }
+}

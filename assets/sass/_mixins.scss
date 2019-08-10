@@ -1,0 +1,48 @@
+// (default)	Mobile-portrait
+// min-width: 480px	Mobile-landscape (and larger)
+// min-width: 768px	Tablet-portrait (and larger)
+// min-width: 992px	Tablet-landscape (and larger)
+// min-width: 1200px	Laptops (and langer)
+
+@mixin gridless {
+  @supports not (display: $grid-debug) {
+    @content;
+  }
+}
+@mixin grid {
+  @supports (display: $grid-debug) {
+    @content;
+  }
+}
+@mixin dark-mode {
+  @media (prefers-color-scheme: $color-scheme-debug) {
+    @content;
+  }
+}
+
+@mixin mobile { // Mobile & Tablet
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet-up {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop-up { // Laptop & up
+  @media only screen and (min-width: 1023px) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  @media only screen and (min-width: 1439px) {
+    // border: 2px solid orange;
+    @content;
+  }
+}
+@mixin widescreen-up {
+  @media only screen and (min-width: 2000px) {
+    @content;
+  }
+}

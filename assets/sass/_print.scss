@@ -1,0 +1,35 @@
+@media print {
+  .print-logo {
+    display: block;
+    svg { height: 0.7in; fill: var(--primary-color); }
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 0.5in;
+  }
+  @page {
+    margin: 1in;
+  }
+  #copyright {
+    font-size: 0.8;
+    color: #444;
+  }
+  article, section, aside, figure, header {
+    display: block;
+  }
+  h2, h3 {
+    break-after: avoid-page;
+    color: #333 !important;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    color: #222;
+    line-height: 1.2;
+    margin: 0;
+    &+p {
+      text-indent: 1em;
+    }
+  }
+  .no-print, .footnote-return { display: none; }
+}
