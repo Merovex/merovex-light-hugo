@@ -1,11 +1,18 @@
 $syntax-hue: 198;
 $syntax-saturation: 13%;
 
-$accent-hue: 20;
+$accent-hue: 22;
 $accent-saturation: 88%;
 $accent-lightness:  31%;
 
 $accent: hsl($accent-hue, $accent-saturation, $accent-lightness);
+$accent2: hsl($accent-hue, $accent-saturation, 60);
+
+$secondary: hsl($accent-hue - 180, $accent-saturation, $accent-lightness);
+$secondary2: hsl($accent-hue + 180, $accent-saturation, 60);
+$secondary3: hsl($accent-hue + 180, $accent-saturation, 90);
+$secondary03: hsl($accent-hue + 180, 35, 40);
+
 
 $base03:  hsl($syntax-hue, $syntax-saturation, 21);
 $base02:  hsl($syntax-hue, $syntax-saturation, 30);
@@ -22,7 +29,7 @@ $orange:  hsl( 30, 54%, 61%); // <-orange 1
 $yellow:  hsl( 40, 67%, 69%); // <-orange 2
 $green:   hsl( 95, 38%, 62%); // <-green
 $cyan:    hsl(190, 47%, 55%); // <-cyan
-$blue:    hsl(210, 82%, 66%); // <-blue
+$blue:    hsl(204, 82%, 66%); // <-blue
 $violet:  hsl(285, 60%, 67%); // <-purple
 
 // Dark

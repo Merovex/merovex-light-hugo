@@ -1,4 +1,5 @@
 footer {
+  @extend .no-print;
   background: $base03;
   width: 100%;
   @include dark-mode {
@@ -45,7 +46,6 @@ footer {
     grid-template-rows: auto;
     align-content: space-around;
     @include tablet-up {
-      margin-top: 0.25in;
       padding-top: 0.25in;
       grid-template-columns: 2fr 3fr;
       grid-template-areas:
@@ -54,7 +54,6 @@ footer {
         " copy copy";
     }
     @include laptop-up {
-      margin-top: 0.5in;
       padding-top: 0.5in;
       grid-template-columns: 3fr 2fr 4fr;
       grid-template-areas:
@@ -76,7 +75,6 @@ footer {
         "copy copy copy copy";
     }
     @include mobile {
-      margin-top: 0.25in;
       padding-top: 2em;
       grid-template-columns: 1fr;
       grid-template-areas:

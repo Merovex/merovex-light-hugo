@@ -1,5 +1,5 @@
 $color-scheme-debug: dark;
-$color-scheme-debug: debug;
+// $color-scheme-debug: debug;
 $grid-debug: grid;
 // $grid-debug: debug; // grid is for production.
 
@@ -7,7 +7,7 @@ $grid-debug: grid;
 @import "normalize";
 @import "typography";
 @import "color";
-
+@import "single";
 @import "header";
 @import "footer";
 
@@ -24,6 +24,12 @@ html, body {
     @include dark-mode {
       background: $base03;
       color: $base3;
+      a {
+        color: $secondary2;
+        &:visited {
+          color: $accent2;
+        }
+      }
     }
   }
   .print-logo { display: none; }
@@ -34,4 +40,7 @@ html, body {
     img { max-width: 100% !important; }
     main, footer { padding: 1em; }
   }
+}
+@media print {
+  .no-print { display: none; }
 }

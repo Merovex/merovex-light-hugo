@@ -1,4 +1,5 @@
 #site-navbar {
+  @extend .no-print;
   background: $accent;
   a {
     text-decoration: none;

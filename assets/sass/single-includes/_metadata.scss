@@ -1,0 +1,5 @@
+aside#metadata {
+  @extend .no-print;
+  grid-area: meta;
+  text-align: center;
+}

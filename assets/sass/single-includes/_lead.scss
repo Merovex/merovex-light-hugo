@@ -1,0 +1,14 @@
+section#body {
+  &>p:first-of-type {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+  &>p:first-of-type:first-letter {
+      float: left;
+      font-size: 3.5em;
+      line-height: 0.8;
+      padding-right: 4px;
+      color:       var(--primary-color) !important;
+      font-family: var(--font-family-serif);
+  }
+}

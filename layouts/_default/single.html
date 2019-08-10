@@ -1,8 +1,8 @@
 {{ define "main" }}
-<body class='grid'>
+<body>
   {{- partial "header.html" . -}}
-  <main>
-    <article id='single'>
+  <main id='single'>
+    <article>
       {{ if .Params.photo }}
       <figure id='article-image'>
         <img src="/images/articles/{{ .Params.photo.image }}" alt="">
