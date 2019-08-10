@@ -14,8 +14,10 @@
     "text";
   @include tablet-up {
     width: 38em;
+    padding-bottom: 0.5in;
   }
   @include laptop-up {
+    padding-bottom: 1in;
     width: 50em;
     grid-template-columns: auto 40em;
     grid-template-areas:

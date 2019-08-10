@@ -1,6 +1,9 @@
 #site-navbar {
   @extend .no-print;
   background: $accent;
+  @include dark-mode {
+    background: $accent0;
+  }
   a {
     text-decoration: none;
     color: $base3;

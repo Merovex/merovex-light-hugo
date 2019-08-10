@@ -1,8 +1,10 @@
 main#single {
   article {
     margin: 0 auto !important;
-    // border: 1px solid red;
     a {
+      @include dark-mode {
+        color: saturate($accent2, 80);
+      }
       &:hover {
         color: $secondary03;
         background: $secondary2;

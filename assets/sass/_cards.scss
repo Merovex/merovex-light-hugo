@@ -7,9 +7,24 @@
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: minmax(200px, auto);
-  grid-gap: 1rem;
+  grid-gap: 1em;
+  margin: 0 auto;
+  @include mobile {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+  @include tablet-up {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include laptop-up {
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  @include widescreen-up {
+    width: 1200px;
+  }
+
   h4 {
     font-weight: normal;
     text-align: center;
@@ -22,20 +37,24 @@
     }
   }
   .card {
-    border: 1px solid #EEE;
+    border: 1px solid $secondary01;
     box-shadow: 0.2em 0.2em 0.2em rgba(#000, 0.1);
+    background: $base3;
+    @include dark-mode {
+      background: $base01;
+      color: $base3;
+    }
     border-radius: 4px;
     padding: .5rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    // @include border-shade();
+    width: 97%;
     .thumbnail img {
       width: 100%;
       height: 150px;
       object-fit: cover;
       border: 1px solid;
-      // @include border-shade();
     }
     section {
       display: flex;
@@ -68,14 +87,12 @@
         }
       }
       @include cat-color($secondary0);
-      //
       &.philosophy        { @include cat-color(adjust-hue($secondary0, 50deg));  }
       &.technology        { @include cat-color(adjust-hue($secondary0, 100deg)); }
       &.worldbuilding     { @include cat-color(adjust-hue($secondary0, 150deg)); }
       &.writing           { @include cat-color(adjust-hue($secondary0, 200deg)); }
       &.writing-craft     { @include cat-color(adjust-hue($secondary0, 250deg)); }
       &.writing-on-github { @include cat-color(adjust-hue($secondary0, 300deg)); }
-      // a { text-decoration: none; color: $primary-10; }
     }
   }
 }
