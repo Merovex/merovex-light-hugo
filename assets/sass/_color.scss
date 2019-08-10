@@ -1,7 +1,7 @@
 $syntax-hue: 198;
 $syntax-saturation: 13%;
 
-// Nordic Woods
+// Nordic Woods https://www.designhill.com/design-blog/unique-and-memorable-color-palettes-to-inspire-you/
 $nw-blue:   #3A4F68; // Fijord
 $nw-brown:  #61412a; // Quincy
 $nw-tan:    #b37c56; // Driftwood
@@ -16,29 +16,14 @@ $accent1: lighten($nw-blue,30);
 $accent2: lighten($nw-blue,45);
 $accent3: lighten($nw-blue,60);
 
-// $accent-hue: 22;
-// $accent-saturation: 88%;
-// $accent-lightness:  31%;
-// $accent-hue: 224;
-// $accent-saturation: 25%;
-// $accent-lightness:  25%;
-//
-// $accent: hsl($accent-hue, $accent-saturation, $accent-lightness);
-// $accent2: hsl($accent-hue, $accent-saturation, 60);
-//
-// $secondary: hsl($accent-hue - 180, $accent-saturation, $accent-lightness);
-// $secondary2: hsl($accent-hue + 180, $accent-saturation, 60);
-// $secondary3: hsl($accent-hue + 180, $accent-saturation, 90);
-// $secondary03: hsl($accent-hue + 180, 35, 40);
-
 $secondary03:  darken($nw-tan, 48);
 $secondary02:  darken($nw-tan, 36);
 $secondary01:  darken($nw-tan, 24);
 $secondary00:  darken($nw-tan, 12);
 $secondary0:   lighten($nw-tan, 0);
-$secondary1:   lighten($nw-tan, 12);
-$secondary2:   lighten($nw-tan, 24);
-$secondary3:   lighten($nw-tan, 36);
+$secondary1:   lighten($nw-tan, 13);
+$secondary2:   lighten($nw-tan, 26);
+$secondary3:   lighten($nw-tan, 40);
 
 $base03:  darken($nw-grey, 60);
 $base02:  darken($nw-grey, 45);

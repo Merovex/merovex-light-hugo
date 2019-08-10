@@ -1,3 +1,4 @@
+$pagination-bg: $accent1;
 ul.pagination {
   align-items: center;
   display: flex;
@@ -9,25 +10,28 @@ ul.pagination {
     list-style: none;
     margin: 0 0.2em;
     a {
-      // color: $secondary;
-      @media (prefers-color-scheme: dark) {
-        // color: $secondary-dark;
-      }
-      border-radius: 0.5em;
+      background: $pagination-bg;
+      width: 1.5em;
+      height: 1.5em;
+      display: inline-block;
+      border-radius: 0.3em;
       border: 1px solid;
-      @include border-shade();
+      text-decoration: none;
+      border-color: darken($pagination-bg, 20%);
+      color: $base3;
+
       &:hover {
-        // background-color: $ternary;
-        // color: $gray-10 !important;
-        // @include border-shade($ternary);
-        @include hover-darkness(100%);
+        background: lighten($pagination-bg, 20%);
+        color: darken($pagination-bg, 40%);
       }
     }
     &.active {
       a {
-        // @include border-shade($secondary);
-        // background-color: $secondary;
-        // color: $gray-10 !important;
+        background: darken($pagination-bg, 20%);
+        &:hover {
+          background: darken($pagination-bg, 20%);
+          color: $base3;
+        }
       }
     }
   }

@@ -4,10 +4,11 @@ $grid-debug: grid;
 // $grid-debug: debug; // grid is for production.
 
 @import "mixins";
+@import "color";
 @import "normalize";
 @import "typography";
-@import "color";
 @import "single";
+@import "pagination";
 @import "header";
 @import "footer";
 
@@ -19,7 +20,7 @@ html, body {
 
 @media screen {
   body {
-    background: $base3;
+    background: $secondary3;
     color: $base02;
     @include dark-mode {
       background: $base02;

@@ -1,6 +1,7 @@
 main#single {
-  display: flex;
   article {
+    margin: 0 auto !important;
+    // border: 1px solid red;
     a {
       &:hover {
         color: $secondary03;
@@ -8,52 +9,11 @@ main#single {
         border-radius: 4px;
       }
     }
-    margin: 0 auto;
-    @import "single-includes/figure";
-    @import "single-includes/lead";
-    @import "single-includes/topography";
-    @import "single-includes/metadata";
     @import "single-includes/blockquote";
-    @include mobile {
-      max-width: 90%;
-    }
-    @include laptop-up {
-      max-width: 40em;
-    }
-    // width: 100%;
-    // display: grid;
-    // grid-template-rows: auto;
-    // grid-template-columns: 1fr;
-    // grid-template-areas:
-    //   "fig"
-    //   "title"
-    //   "meta"
-    //   "body";
-
-    //
-
-    // }
-  }
-  @include grid {
-    display: grid;
-    grid-gap: 0.5em;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    align-content: space-around;
-    @include tablet-up {
-      padding-bottom: 0.25in;
-    }
-    @include laptop-up {
-      padding-bottom: 0.5in;
-      grid-template-columns: 1fr;
-    }
-    @include desktop-up {
-    }
-    @include widescreen-up {
-    }
-    @include mobile {
-      padding-bottom: 0.25in;
-      padding: 0, 1em 0.25in 1em;
-    }
+    @import "single-includes/figure";
+    @import "single-includes/grid";
+    @import "single-includes/lead";
+    // // @import "single-includes/metadata";
+    @import "single-includes/topography";
   }
 }

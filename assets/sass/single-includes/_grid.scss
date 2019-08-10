@@ -1,0 +1,26 @@
+@include grid {
+  header       { grid-area: title; }
+  figure       { grid-area: figure;  }
+  section#text { grid-area: text; }
+  #metadata    { grid-area: meta; }
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title"
+    "figure"
+    "meta"
+    "text";
+  @include tablet-up {
+    width: 38em;
+  }
+  @include laptop-up {
+    width: 50em;
+    grid-template-columns: auto 40em;
+    grid-template-areas:
+      "figure figure"
+      "title  title"
+      "meta   text";
+  }
+}
