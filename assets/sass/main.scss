@@ -1,5 +1,5 @@
 $color-scheme-debug: dark;
-// $color-scheme-debug: debug;
+$color-scheme-debug: debug;
 $grid-debug: grid;
 // $grid-debug: debug; // grid is for production.
 
@@ -20,9 +20,9 @@ html, body {
 @media screen {
   body {
     background: $base3;
-    color: $base03;
+    color: $base02;
     @include dark-mode {
-      background: $base03;
+      background: $base02;
       color: $base3;
       a {
         color: $secondary2;

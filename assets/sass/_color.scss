@@ -1,27 +1,53 @@
 $syntax-hue: 198;
 $syntax-saturation: 13%;
 
-$accent-hue: 22;
-$accent-saturation: 88%;
-$accent-lightness:  31%;
+// Nordic Woods
+$nw-blue:   #3A4F68; // Fijord
+$nw-brown:  #61412a; // Quincy
+$nw-tan:    #b37c56; // Driftwood
+$nw-grey:   #9aacb8; // Close to Gull Gray
+$nw-ltgrey: #dde2e5; // Geyser
 
-$accent: hsl($accent-hue, $accent-saturation, $accent-lightness);
-$accent2: hsl($accent-hue, $accent-saturation, 60);
+$accent03: darken($nw-blue, 30);
+$accent01: darken($nw-blue, 15);
+$accent: $nw-blue;
+$accent0: lighten($nw-blue,15);
+$accent1: lighten($nw-blue,30);
+$accent2: lighten($nw-blue,45);
+$accent3: lighten($nw-blue,60);
 
-$secondary: hsl($accent-hue - 180, $accent-saturation, $accent-lightness);
-$secondary2: hsl($accent-hue + 180, $accent-saturation, 60);
-$secondary3: hsl($accent-hue + 180, $accent-saturation, 90);
-$secondary03: hsl($accent-hue + 180, 35, 40);
+// $accent-hue: 22;
+// $accent-saturation: 88%;
+// $accent-lightness:  31%;
+// $accent-hue: 224;
+// $accent-saturation: 25%;
+// $accent-lightness:  25%;
+//
+// $accent: hsl($accent-hue, $accent-saturation, $accent-lightness);
+// $accent2: hsl($accent-hue, $accent-saturation, 60);
+//
+// $secondary: hsl($accent-hue - 180, $accent-saturation, $accent-lightness);
+// $secondary2: hsl($accent-hue + 180, $accent-saturation, 60);
+// $secondary3: hsl($accent-hue + 180, $accent-saturation, 90);
+// $secondary03: hsl($accent-hue + 180, 35, 40);
 
+$secondary03:  darken($nw-tan, 48);
+$secondary02:  darken($nw-tan, 36);
+$secondary01:  darken($nw-tan, 24);
+$secondary00:  darken($nw-tan, 12);
+$secondary0:   lighten($nw-tan, 0);
+$secondary1:   lighten($nw-tan, 12);
+$secondary2:   lighten($nw-tan, 24);
+$secondary3:   lighten($nw-tan, 36);
 
-$base03:  hsl($syntax-hue, $syntax-saturation, 21);
-$base02:  hsl($syntax-hue, $syntax-saturation, 30);
-$base01:  hsl($syntax-hue, $syntax-saturation, 40);
-$base00:  hsl($syntax-hue, $syntax-saturation, 45);
-$base0:   hsl($syntax-hue, $syntax-saturation, 50);
-$base1:   hsl($syntax-hue, $syntax-saturation, 60);
-$base2:   hsl($syntax-hue, $syntax-saturation, 85);
-$base3:   hsl($syntax-hue, $syntax-saturation, 99);
+$base03:  darken($nw-grey, 60);
+$base02:  darken($nw-grey, 45);
+$base01:  darken($nw-grey, 30);
+$base00:  darken($nw-grey, 15);
+$base0:   lighten($nw-grey, 0);
+$base1:   lighten($nw-grey, 10);
+$base2:   lighten($nw-grey, 20);
+$base3:   lighten($nw-grey, 30);
 
 $red:     hsl(  5, 48%, 51%); // <-red 2
 $magenta: hsl(355, 65%, 65%); // <-red 1
@@ -35,16 +61,3 @@ $violet:  hsl(285, 60%, 67%); // <-purple
 // Dark
 $blue-dark:    hsl(204, 100, 70);
 $violet-dark:  hsl(310, 100, 80);
-
-// if $solarized is dark
-//   $fg:      $base0
-//   $bg:      $base03
-//   $hl:      $base02
-//   $emph:    $base1
-//   $comment: $base01
-// else
-//   $fg:      $base00
-//   $bg:      $base3
-//   $hl:      $base2
-//   $emph:    $base01
-//   $comment: $base1

@@ -1,12 +1,18 @@
 footer {
   @extend .no-print;
-  background: $base03;
+  background: $secondary00;
   width: 100%;
   @include dark-mode {
-    background: $base01;
+    background: $secondary01;
   }
   color: $base3;
-  a { color: $base2; }
+  a {
+    color: $base2;
+    &:hover {
+      background: $secondary2;
+      color: $secondary02;
+    }
+  }
   nav, h3, form { margin: 0 1em; width: 90%; }
   #footer-brand {
     grid-area: fbrand;

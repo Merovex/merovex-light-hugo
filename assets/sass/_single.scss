@@ -1,8 +1,14 @@
 main#single {
   display: flex;
   article {
+    a {
+      &:hover {
+        color: $secondary03;
+        background: $secondary2;
+        border-radius: 4px;
+      }
+    }
     margin: 0 auto;
-    border: 1px solid purple;
     @import "single-includes/figure";
     @import "single-includes/lead";
     @import "single-includes/topography";
