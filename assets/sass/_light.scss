@@ -1,0 +1,18 @@
+body {
+  background: $base3;
+  color: $base03;
+  #site-navbar {
+    background: $accent;
+    svg {
+      height: 1.5em !important;
+    }
+    a {
+      text-decoration: none;
+      color: $base3;
+      opacity: 0.85;
+      &:hover, &:active {
+        opacity: 1.0;
+      }
+    }
+  }
+}

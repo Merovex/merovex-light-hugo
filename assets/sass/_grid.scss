@@ -1,101 +1,18 @@
-@media screen {
-  @supports not (display: grid) {
-    header,
-    main,
-    section {
-      max-width: 50em;
-      margin: 0 auto;
-    }
-  }
-  @mixin container($c) {
-    grid-template-columns: auto $c auto;
-  }
-  @supports (grid-area: auto) {
-    body.grid {
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      @media (max-width: 768px) {
-        grid-template-columns: auto;
-        grid-template-areas:
-          "head"
-          "main"
-          "foot";
-        header {
-          grid-template-columns: 1fr 2fr;
-          grid-template-rows: 1fr;
-          grid-template-areas: "brand navbar";
-        }
-        footer {
-          grid-template-rows: 1fr 1fr 1fr auto;
-          grid-template-areas:
-            "logo"
-            "cta"
-            "links"
-            "copy";
-        }
-        figure {
-          display: none;
-        }
-        main {
-          display: grid;
-          margin: 0 1em;
-        }
-        article#single {
-          grid-template-rows: auto;
-          grid-template-columns: 1fr;
-          grid-template-areas:
-            "fig"
-            "title"
-            "meta"
-            "body";
-        }
-      }
-      @media (min-width: 768px) {
-        @include container($cnt-md);
-        grid-template-areas:
-          "head head head"
-          "... main ..."
-          "foot foot foot";
-        header, footer {
-          grid-template-columns: auto 320px 640px auto;
-        }
-        header {
-          grid-template-rows: 1fr;
-          grid-column-gap: 20px;
-          grid-template-areas: "... brand navbar ...";
-        }
-        footer {
-          grid-template-rows: 1fr 1fr auto;
-          grid-gap: 1em;
-          grid-template-areas:
-            "... logo cta ..."
-            "... links cta ..."
-            "copy copy copy copy";
-        }
-        article#single {
-          grid-template-rows: auto, auto, 1fr;
-          grid-template-columns: 2fr 8fr 2fr;
-          grid-template-areas:
-            "fig fig fig"
-            "title title title"
-            "... meta ..."
-            "... body ...";
-        }
-      }
-      @media (min-width: 992px) {
-        @include container($cnt-lg);
-        header, footer {
-          grid-template-columns: auto 320px 640px auto;
-        }
-        article#single {
-          grid-template-rows: 1fr, auto, 1fr;
-          grid-template-columns: 1fr 3fr;
-          grid-template-areas:
-            "fig fig"
-            "title title"
-            "meta body";
-        }
-      }
-    }
-  }
-}
+// // @include viewpoint-7 {
+//   @include grid {
+//     #site-navbar {
+//       display: grid;
+//       grid-template-rows: 1fr 1fr 1fr;
+//       grid-template-areas: "... brand ...";
+//       section {
+//         border: 1px solid red;
+//       }
+//       #brand {
+//         grid-area: brand;
+//       }
+//       #sn-1 {
+//         text-align: right;
+//       }
+//     }
+//   }
+// // }

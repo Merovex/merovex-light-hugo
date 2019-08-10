@@ -1,53 +1,20 @@
-@mixin hover-darkness($amt:70%) {
-  &:hover{ filter: brightness($amt); }
-  // @media (prefers-color-scheme: dark) {
-    &:hover{ filter: brightness(130%); }
-  // }
-}
-@mixin border-shade($color:#777) {
-  border-color: grayscale(darken($color, 10%));
-  @media (prefers-color-scheme: dark) {
-    // border-color: $gray-50;
-  }
-}
+$color-scheme-debug: dark;
+// $color-scheme-debug: debug;
+$grid-debug: grid;
+// $grid-debug: debug; // grid is for production.
 
-@import "vars";
-@import "reboot"; //  Bootstrap's reboot
-@import "theme-color";
-@import "theme";
-@import "badge";
-@import "fonts";
+@import "mixins";
+@import "normalize";
+@import "typography";
+@import "color";
+@import "light";
+@import "dark";
 @import "grid";
-@import "single";
-@import "temp";
 @import "header";
-@import "pagination";
-@import "print";
-@import "cards";
-@import "footer";
-@import "hero";
+@import "gridless";
 
-main {
-  grid-area: main;
-}
-.print-logo {
-  display: none;
-}
-table {
-  width: 100%;
-  font-size: 0.95rem;
-  margin: 2em 0;
-  caption {
-    font-size: 0.8em;
-  }
-  tr {
-    border-top: 1px solid;
-    @include border-shade($background);
-    td, th {
-      padding: 0.5em 0;
-    }
-    th {
-      font-weight: bold;
-    }
+html, body {
+  .brand svg {
+    height: 2em;
   }
 }

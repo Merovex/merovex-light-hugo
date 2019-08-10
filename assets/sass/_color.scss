@@ -1,36 +1,43 @@
-$base-hue: 219;
-$primary-color: hsl(219, 30%, 35%);
-// 21
-:root {
-  --primary-color:         hsl(219, 30%, 35%);
-  --primary-color-light:   hsl(219, 30%, 45%);
-  --primary-color-dark:    hsl(219, 30%, 30%);
-  --primary-color-darker:  hsl(219, 25%, 25%);
-  --primary-color-darkest: hsl(219, 20%, 20%);
-  --violet:                hsl(290, 70%, 50%);
-  --indigo:                hsl(270, 70%, 60%); // 270
-  --blue:                  hsl(240, 80%, 50%); // 240
-  --cyan:                  hsl(180, 50%, 40%); // 180
-  --green:                 hsl(120, 70%, 30%); //
-  --yellow:                hsl(60,  70%, 60%);
-  --orange:                hsl(36,  60%, 50%);
-  --red:                   hsl(5,   60%, 50%);
-  --facebook:              hsl(221, 60%, 66%); // #3b5998
-  --twitter:               hsl(207, 80%, 66%); // #71b7f0
-  --google:                hsl(7, 65%, 66%);   // #d34836
-  --email:                 hsl(120, 60%, 50%);
-  --white:                 hsl(219,13%,98);
-  --gray-900:              hsl(219,13%,90);
-  --gray-800:              hsl(219,13%,80);
-  --gray-700:              hsl(219,13%,70);
-  --gray-600:              hsl(219,13%,60);
-  --gray-500:              hsl(219,13%,50);
-  --gray-400:              hsl(219,13%,40);
-  --gray-300:              hsl(219,13%,30);
-  --gray-200:              hsl(219,13%,25);
-  --gray-100:              hsl(219,13%,20);
-  --black:                 hsl(219,13%,10);
-}
-.bg-white {
-  background: var(--white) !important;
-}
+$syntax-hue: 198;
+$syntax-saturation: 13%;
+
+$accent-hue: 20;
+$accent-saturation: 88%;
+$accent-lightness:  31%;
+
+$accent: hsl($accent-hue, $accent-saturation, $accent-lightness);
+
+$base03:  hsl($syntax-hue, $syntax-saturation, 21);
+$base02:  hsl($syntax-hue, $syntax-saturation, 30);
+$base01:  hsl($syntax-hue, $syntax-saturation, 40);
+$base00:  hsl($syntax-hue, $syntax-saturation, 45);
+$base0:   hsl($syntax-hue, $syntax-saturation, 50);
+$base1:   hsl($syntax-hue, $syntax-saturation, 60);
+$base2:   hsl($syntax-hue, $syntax-saturation, 85);
+$base3:   hsl($syntax-hue, $syntax-saturation, 99);
+
+$red:     hsl(  5, 48%, 51%); // <-red 2
+$magenta: hsl(355, 65%, 65%); // <-red 1
+$orange:  hsl( 30, 54%, 61%); // <-orange 1
+$yellow:  hsl( 40, 67%, 69%); // <-orange 2
+$green:   hsl( 95, 38%, 62%); // <-green
+$cyan:    hsl(190, 47%, 55%); // <-cyan
+$blue:    hsl(210, 82%, 66%); // <-blue
+$violet:  hsl(285, 60%, 67%); // <-purple
+
+// Dark
+$blue-dark:    hsl(204, 100, 70);
+$violet-dark:  hsl(310, 100, 80);
+
+// if $solarized is dark
+//   $fg:      $base0
+//   $bg:      $base03
+//   $hl:      $base02
+//   $emph:    $base1
+//   $comment: $base01
+// else
+//   $fg:      $base00
+//   $bg:      $base3
+//   $hl:      $base2
+//   $emph:    $base01
+//   $comment: $base1
