@@ -21,15 +21,29 @@ html, body {
 
 @media screen {
   body {
-    background: $secondary3;
-    color: $base02;
+    background: $site-bg;
+    color: text-contrast($site-fg, $site-bg);
+    a {
+      transition: background 0.2s;
+      transition: color 0.2s;
+      color: text-contrast($site-link-color, $site-bg);
+      &:hover {
+        color: text-contrast($site-link-hover-color, $site-bg);
+      }
+      &:visited {
+        color: text-contrast($site-link-visited-color, $site-bg);
+      }
+    }
     @include dark-mode {
-      background: $base02;
-      color: $base3;
+      background: $site-fg;
+      color: text-contrast($site-bg, $site-fg);
       a {
-        color: $secondary2;
+        color: text-contrast($site-link-color, $site-fg);
+        &:hover {
+          color: text-contrast($site-link-hover-color, $site-fg);
+        }
         &:visited {
-          color: $accent2;
+          color: text-contrast($site-link-visited-color, $site-fg);
         }
       }
     }

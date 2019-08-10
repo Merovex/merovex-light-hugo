@@ -1,12 +1,12 @@
 #site-navbar {
   @extend .no-print;
-  background: $accent;
+  background: $header-bg;
   @include dark-mode {
-    background: $accent0;
+    background: $header-bg;
   }
   a {
     text-decoration: none;
-    color: $base3;
+    color: text-contrast($header-fg, $site-fg);
     opacity: 0.85;
     &:hover, &:active {
       opacity: 1.0;
@@ -18,7 +18,7 @@
   padding: 1em 0;
   a { padding: 0.3em 0.5em; white-space: nowrap; text-align: center;}
   a#brand {
-    color: white;
+    color: $header-fg;
     text-decoration: none;
     filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
     svg { height: 2rem !important;

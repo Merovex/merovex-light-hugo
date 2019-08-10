@@ -1,18 +1,9 @@
+$bg: text-contrast($footer-bg, $site-bg);
 footer {
   @extend .no-print;
-  background: $secondary00;
-  width: 100%;
-  @include dark-mode {
-    background: $nightfall;
-  }
-  color: $base3;
-  a {
-    color: $base2;
-    &:hover {
-      background: $secondary2;
-      color: $secondary02;
-    }
-  }
+  background: $bg;
+  color: $base2;
+  svg { fill: $base2; }
   nav, h3, form { margin: 0 1em; width: 90%; }
   #footer-brand {
     grid-area: fbrand;
@@ -34,12 +25,16 @@ footer {
     ul { padding: 0;
       li {
         margin-left: 1em;
+        a {
+          color: text-contrast($site-link-color, $bg);
+        }
       }
     }
   }
   #copyright {
     grid-area: copy;
-    background: rgba(0,0,0,0.3);
+    background: darken($bg,10);
+    color: text-contrast($footer-fg, darken($bg,10));
     text-align: center;
     margin-top: 2em;
     padding: 0.5em;

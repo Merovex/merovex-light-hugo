@@ -5,9 +5,9 @@ blockquote {
       top: 0.35em;
       left: -0.25em;
       line-height: 0;
-      color: $secondary3;
+      color: text-contrast(darken($site-bg,5), $site-bg);
       @include dark-mode {
-        color: $secondary00;
+        color: text-contrast(lighten($site-bg,5), $site-fg);
       }
       font-size: 16em;
       z-index: -1;
@@ -17,8 +17,9 @@ blockquote {
   font-style: italic;
   border-radius: 0.5em;
   padding: 0.5em 1em;
+  text-shadow: 0px 1px 2px $site-bg;
   @include dark-mode {
-    text-shadow: 1px 1px 1px $base02;
+    text-shadow: 1px 1px 1px $site-fg;
   }
   blockquote {
     &:before { content: ''; }

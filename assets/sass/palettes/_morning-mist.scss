@@ -1,0 +1,55 @@
+// Nordic Woods https://www.designhill.com/design-blog/unique-and-memorable-color-palettes-to-inspire-you/
+$slate:    #2B4251; // Nightfall
+$creosote: #2E323C; // Bark
+$currant:  #45415E; // Burnt Amber
+$rain:     #5B7D87; // Lead
+$dew:      #91B3BC; // Frost (Darkest frost: #191d1e)
+
+$accent03: darken($slate, 11);
+$accent02: lighten($slate, 0);
+$accent01: lighten($slate, 11);
+$accent00: lighten($slate, 22);
+$accent:   lighten($slate, 33);
+$accent0:  lighten($slate, 44);
+$accent1:  lighten($slate, 55);
+$accent2:  lighten($slate, 66);
+$accent3:  lighten($slate, 66);
+
+$secondary03:  darken($currant, 15);
+$secondary02:  lighten($currant, 0);
+$secondary01:  lighten($currant, 11);
+$secondary00:  lighten($currant, 22);
+$secondary0:   lighten($currant, 33);
+$secondary1:   lighten($currant, 44);
+$secondary2:   lighten($currant, 55);
+$secondary3:   lighten($currant, 66);
+
+$base-color: $creosote;
+$base03:  $base-color; //#3E3E3B;
+$base02:  lighten($base-color, 11);
+$base01:  lighten($base-color, 22);
+$base00:  lighten($base-color, 33);
+$base0:   lighten($base-color, 44);
+$base1:   lighten($base-color, 55);
+$base2:   lighten($base-color, 66);
+$base3:   lighten($base-color, 77);
+
+$site-bg: $base3;
+$site-fg: $base03;
+$site-link-color: $accent00;
+$site-link-visited-color: $secondary00;
+$site-link-hover-color: $red;
+
+$header-bg: $accent01;
+$header-fg: $accent3;
+
+$article-h1: $secondary00;
+$article-h2: $secondary00;
+
+$footer-bg:      $accent;
+$footer-dark-bg: $secondary00;
+$footer-fg:      $base2;
+$footer-link-color: $base3;
+
+$card-bg: $base3;
+$card-fg: $base02;

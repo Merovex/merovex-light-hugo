@@ -1,48 +1,12 @@
-// Nordic Woods https://www.designhill.com/design-blog/unique-and-memorable-color-palettes-to-inspire-you/
-$nightfall:   #3C455C; // Nightfall
-$bark:        #60412B; // Bark
-$burntamber:  #B37C57; // Burnt Amber
-$lead:        #9AACB8; // Lead
-$frost:       #DDE2E3; // Frost (Darkest frost: #191d1e)
-
-$accent03: darken($nightfall, 20);
-$accent02: darken($nightfall, 15);
-$accent01: darken($nightfall, 10);
-$accent00: darken($nightfall, 5);
-$accent:  $nightfall;
-$accent0: lighten($nightfall,15);
-$accent1: lighten($nightfall,30);
-$accent2: lighten($nightfall,45);
-$accent3: lighten($nightfall,60);
-
-$secondary03:  darken($burntamber, 48);
-$secondary02:  darken($burntamber, 36);
-$secondary01:  darken($burntamber, 24);
-$secondary00:  darken($burntamber, 12);
-$secondary0:   lighten($burntamber, 0);
-$secondary1:   lighten($burntamber, 13);
-$secondary2:   lighten($burntamber, 26);
-$secondary3:   lighten($burntamber, 40);
-
-$base-color: #191d1e;
-$base03:  $base-color; //#3E3E3B;
-$base02:  lighten($base-color, 12);
-$base01:  lighten($base-color, 24);
-$base00:  lighten($base-color, 36);
-$base0:   lighten($base-color, 48);
-$base1:   lighten($base-color, 60);
-$base2:   lighten($base-color, 72);
-$base3:   lighten($base-color, 84);
-@debug $base3;
 
 
-$base02:  darken($lead, 45);
-$base01:  darken($lead, 30);
-$base00:  darken($lead, 15);
-$base0:   lighten($lead, 0);
-$base1:   lighten($lead, 10);
-$base2:   lighten($lead, 20);
-$base3:   lighten($lead, 30);
+// $base02:  darken($lead, 45);
+// $base01:  darken($lead, 30);
+// $base00:  darken($lead, 15);
+// $base0:   lighten($lead, 0);
+// $base1:   lighten($lead, 10);
+// $base2:   lighten($lead, 20);
+// $base3:   lighten($lead, 30);
 
 $red:     hsl(  5, 48%, 51%); // <-red 2
 $magenta: hsl(355, 65%, 65%); // <-red 1
@@ -56,3 +20,6 @@ $violet:  hsl(285, 60%, 67%); // <-purple
 // Dark
 $blue-dark:    hsl(204, 100, 70);
 $violet-dark:  hsl(310, 100, 80);
+
+@import "palettes/nordic-woods";
+// @import "palettes/morning-mist";

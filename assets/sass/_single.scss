@@ -1,16 +1,6 @@
 main#single {
   article {
     margin: 0 auto !important;
-    a {
-      @include dark-mode {
-        color: saturate($accent2, 80);
-      }
-      &:hover {
-        color: $secondary03;
-        background: $secondary2;
-        border-radius: 4px;
-      }
-    }
     @import "single-includes/blockquote";
     @import "single-includes/figure";
     @import "single-includes/grid";

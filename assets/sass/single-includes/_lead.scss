@@ -8,7 +8,14 @@ section#text {
       font-size: 3.5em;
       line-height: 0.8;
       padding-right: 4px;
-      color:       var(--primary-color) !important;
+      // color: $accent0;
+      // @include dark-mode {
+      //   color: $accent1;
+      // }
+      color: text-contrast($accent0, $site-bg);
+      @include dark-mode {
+        color: text-contrast($accent0, $site-fg);
+      }
       font-family: var(--font-family-serif);
   }
 }

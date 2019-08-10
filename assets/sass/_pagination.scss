@@ -11,6 +11,7 @@ ul.pagination {
     margin: 0 0.2em;
     a {
       background: $pagination-bg;
+      color: text-contrast($base1, $pagination-bg,7);
       width: 1.5em;
       height: 1.5em;
       display: inline-block;
@@ -18,11 +19,12 @@ ul.pagination {
       border: 1px solid;
       text-decoration: none;
       border-color: darken($pagination-bg, 20%);
-      color: $base3;
-
+      @include dark-mode {
+        border-color: lighten($pagination-bg, 20%);
+      }
       &:hover {
         background: lighten($pagination-bg, 20%);
-        color: darken($pagination-bg, 40%);
+        color: text-contrast($base1, lighten($pagination-bg, 20%),7);
       }
     }
     &.active {
