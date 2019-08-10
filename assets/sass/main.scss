@@ -1,9 +1,10 @@
 $color-scheme-debug: dark;
-// $color-scheme-debug: debug;
+$color-scheme-debug: debug;
 $grid-debug: grid;
 // $grid-debug: debug; // grid is for production.
 
 @import "mixins";
+@import "a11y";
 @import "color";
 @import "normalize";
 @import "typography";
