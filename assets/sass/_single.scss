@@ -1,11 +1,21 @@
 main#single {
   article {
-    margin: 0 auto !important;
-    @import "single-includes/blockquote";
+    @media screen {
+      margin: 0 auto !important;
+      @import "single-includes/blockquote";
+      @import "single-includes/grid";
+      @import "single-includes/lead";
+      @import "single-includes/topography";
+    }
+    @import "single-includes/metadata";
     @import "single-includes/figure";
-    @import "single-includes/grid";
-    @import "single-includes/lead";
-    // // @import "single-includes/metadata";
-    @import "single-includes/topography";
+    @media print {
+      &:after {
+        text-align: center;
+        font-size: 0.12in;
+        content: "Copyright © Ben Wilson. Rights reserved. Visit https://benwilsonwrites.com for the latest."
+      }
+    }
   }
+
 }

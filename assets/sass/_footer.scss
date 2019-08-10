@@ -34,7 +34,7 @@ footer {
   #copyright {
     grid-area: copy;
     background: darken($bg,10);
-    color: text-contrast($footer-fg, darken($bg,10));
+    color: $base3;
     text-align: center;
     margin-top: 2em;
     padding: 0.5em;
@@ -50,9 +50,9 @@ footer {
       padding-top: 0.25in;
       grid-template-columns: 2fr 3fr;
       grid-template-areas:
-        " fbrand fcta "
-        " flinks fcta "
-        " copy copy";
+        "fbrand fcta"
+        "flinks fcta"
+        "copy copy";
     }
     @include laptop-up {
       padding-top: 0.5in;

@@ -1,0 +1,12 @@
+a.badge {
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 0.8em;
+}
+.badge-secondary {
+  background: $accent0;
+  &:hover {
+    background: $accent02;
+    transition: background 0.2s;
+  }
+}

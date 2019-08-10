@@ -1,21 +1,23 @@
-section#text {
-  &>p:first-of-type {
-    font-size: 1.25em;
-    line-height: 1.5;
+// @media screen {
+  section#text {
+    &>p:first-of-type {
+      font-size: 1.25em;
+      line-height: 1.5;
+    }
+    &>p:first-of-type:first-letter {
+        float: left;
+        font-size: 3.5em;
+        line-height: 0.8;
+        padding-right: 4px;
+        // color: $accent0;
+        // @include dark-mode {
+        //   color: $accent1;
+        // }
+        color: text-contrast($accent0, $site-bg);
+        @include dark-mode {
+          color: text-contrast($accent0, $site-fg);
+        }
+        font-family: var(--font-family-serif);
+    }
   }
-  &>p:first-of-type:first-letter {
-      float: left;
-      font-size: 3.5em;
-      line-height: 0.8;
-      padding-right: 4px;
-      // color: $accent0;
-      // @include dark-mode {
-      //   color: $accent1;
-      // }
-      color: text-contrast($accent0, $site-bg);
-      @include dark-mode {
-        color: text-contrast($accent0, $site-fg);
-      }
-      font-family: var(--font-family-serif);
-  }
-}
+// }

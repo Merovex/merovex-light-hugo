@@ -8,11 +8,14 @@ $grid-debug: grid;
 @import "color";
 @import "normalize";
 @import "typography";
+@import "badge";
+@import "cookie-notice";
 @import "single";
 @import "pagination";
 @import "cards";
 @import "header";
 @import "footer";
+@import "print";
 
 html, body {
   .brand svg {
