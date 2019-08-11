@@ -6,13 +6,13 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #222;
+  background: $accent1;
   color: rgba(255,255,255,0.8);
   a {
     cursor: pointer;
     margin-left: 10px;
-    color: white !important;
-    background: #888;
+    color: text-contrast($site-fg, $accent0) !important;
+    background: $accent0;
     padding: 0.1em;
     border-radius: 0.2em;
     &:visited {
