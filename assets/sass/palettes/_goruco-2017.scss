@@ -1,0 +1,64 @@
+// Nordic Woods https://www.designhill.com/design-blog/unique-and-memorable-color-palettes-to-inspire-you/
+$slate:    #2B4251; // Nightfall
+$creosote: #2E323C; // Bark
+$currant:  #45415E; // Burnt Amber
+$rain:     #5B7D87; // Lead
+$dew:      #91B3BC; // Frost (Darkest frost: #191d1e)
+
+$paua:     #181148;
+$purple:   #7136b1;
+$valencia: #E6534E; // #e6534e
+$grey-suit: #85819d;
+
+$accent-base: $paua;
+$accent03: darken($accent-base, 11);
+$accent02: lighten($accent-base, 0);
+$accent01: lighten($accent-base, 10);
+$accent00: lighten($accent-base, 20);
+$accent:   lighten($accent-base, 30);
+$accent0:  lighten($accent-base, 40);
+$accent1:  lighten($accent-base, 50);
+$accent2:  lighten($accent-base, 60);
+$accent3:  lighten($accent-base, 70);
+
+$secondary-base: $purple;
+$secondary03:  darken($secondary-base, 32);
+$secondary02:  darken($secondary-base, 24);
+$secondary01:  darken($secondary-base, 16);
+$secondary00:  darken($secondary-base, 8);
+$secondary0:   lighten($secondary-base, 0);
+$secondary1:   lighten($secondary-base, 15);
+$secondary2:   lighten($secondary-base, 30);
+$secondary3:   lighten($secondary-base, 45);
+
+$base-color: $grey-suit;
+$base03:  darken($base-color, 40);
+$base02:  darken($base-color, 33);
+$base01:  darken($base-color, 22);
+$base00:  darken($base-color, 11);
+$base0:   lighten($base-color, 0);
+$base1:   lighten($base-color, 15);
+$base2:   lighten($base-color, 30);
+$base3:   lighten($base-color, 45);
+// @debug $base03;
+
+$site-bg: $base3;
+$site-fg: $base03;
+$site-link-color: $accent00;
+$site-link-visited-color: $secondary00;
+$site-link-hover-color: $valencia;
+
+$header-bg: $accent02;
+$header-fg: $accent3;
+
+$article-h1: $secondary00;
+$article-h2: $secondary00;
+
+$footer-bg:      $secondary0;
+$footer-dark-bg: $secondary00;
+$footer-fg:      $base2;
+$footer-link-color: $base3;
+$hero-bg: $secondary00;
+
+$card-bg: $base3;
+$card-fg: $base02;
