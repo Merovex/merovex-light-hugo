@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'libre_caslon_displayregular';
+    src: url('librecaslondisplay-regular-webfont.eot');
+    src: url('librecaslondisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('librecaslondisplay-regular-webfont.woff2') format('woff2'),
+         url('librecaslondisplay-regular-webfont.woff') format('woff'),
+         url('librecaslondisplay-regular-webfont.ttf') format('truetype'),
+         url('librecaslondisplay-regular-webfont.svg#libre_caslon_displayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

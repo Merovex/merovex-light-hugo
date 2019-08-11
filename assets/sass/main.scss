@@ -1,6 +1,6 @@
 $color-scheme-debug: dark;
-$color-scheme-debug: debug;
 $grid-debug: grid;
+// $color-scheme-debug: debug;
 // $grid-debug: debug; // grid is for production.
 
 @import "mixins";
@@ -15,6 +15,7 @@ $grid-debug: grid;
 @import "cards";
 @import "header";
 @import "footer";
+@import "home";
 @import "print";
 
 html, body {
@@ -39,7 +40,7 @@ html, body {
       }
     }
     @include dark-mode {
-      background: $site-fg;
+      background: lighten($site-fg,10);
       color: text-contrast($site-bg, $site-fg);
       a {
         color: text-contrast($site-link-color, $site-fg);
