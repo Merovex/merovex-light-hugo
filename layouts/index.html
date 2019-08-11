@@ -1,11 +1,12 @@
 {{ define "main"}}
   <main id="hero">
-    <article class="">
+    {{- partial "header.html" . -}}
+    <article class="jumbotron">
       <picture>
         <img src="https://dausha.s3.amazonaws.com/images/bellicose-flat-sm.png" alt="" style='height: 30vh;'>
 
       </picture>
-      <section>
+      <section class="book">
           <h1>Alfred is <em>Stranded</em>&hellip;</h1>
           <p>Wrongly accused of murder, anthropologist Alfred Sevrin flees New Briton Orbital to the  world below. He fits to the outlander folk and their dodges through wits and clever toolcraft.</p>
       </section>
