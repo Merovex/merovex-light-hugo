@@ -25,6 +25,7 @@ $secondary1:   lighten($burntamber, 13);
 $secondary2:   lighten($burntamber, 26);
 $secondary3:   lighten($burntamber, 40);
 
+
 $base-color: #191d1e;
 $base03:  $base-color; //#3E3E3B;
 $base02:  lighten($base-color, 12);
@@ -36,7 +37,7 @@ $base2:   lighten($base-color, 72);
 $base3:   lighten($base-color, 84);
 
 $site-bg: $base3;
-$site-fg: $base02;
+$site-fg: $accent02;
 $site-link-color: $blue;
 $site-link-visited-color: $violet;
 $site-link-hover-color: $red;
@@ -51,6 +52,8 @@ $footer-bg:      $secondary00;
 $footer-dark-bg: $secondary00;
 $footer-fg:      $base0;
 $footer-link-color: text-contrast($site-link-color, $footer-bg);
+
+$hero-bg: $secondary0;
 
 $card-bg: $base3;
 $card-fg: $base02;

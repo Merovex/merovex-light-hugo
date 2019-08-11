@@ -18,11 +18,14 @@
   }
   @include laptop-up {
     padding-bottom: 1in;
-    width: 50em;
+    width: 1024px;
     grid-template-columns: auto 40em;
     grid-template-areas:
       "figure figure"
       "title  title"
       "meta   text";
+      #rtime {
+        display: block;
+      }
   }
 }
