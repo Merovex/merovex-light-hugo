@@ -1,0 +1,60 @@
+// $gray-lite:   #EFE7BE;
+// $blue-gray:   #013440;
+// $orange-gray: #8C8474;
+// $orange-dark: #D97925;
+
+$accent-base:    hsl(191,30,45); //#516D73;
+$secondary-base: hsl(50,25,55);//#8C8669;
+$base-color:     hsl(50,31,75); //#BFB584;
+$red:            #A6372D;
+
+$accent-hue: 191; $accent-sat: 30;
+$second-hue: $accent-hue - 140; $second-sat: 27;
+
+$accent03: hsl($accent-hue, $accent-sat, 12);
+$accent02: hsl($accent-hue, $accent-sat, 24);
+$accent01: hsl($accent-hue, $accent-sat, 36);
+$accent00: hsl($accent-hue, $accent-sat, 50);
+$accent0:  hsl($accent-hue, $accent-sat, 60);
+$accent1:  hsl($accent-hue, $accent-sat, 72);
+$accent2:  hsl($accent-hue, $accent-sat, 84);
+$accent3:  hsl($accent-hue, $accent-sat, 96);
+
+$secondary03: hsl($second-hue, $second-sat, 12);
+$secondary02: hsl($second-hue, $second-sat, 24);
+$secondary01: hsl($second-hue, $second-sat, 36);
+$secondary00: hsl($second-hue, $second-sat, 50);
+$secondary0:  hsl($second-hue, $second-sat, 60);
+$secondary1:  hsl($second-hue, $second-sat, 72);
+$secondary2:  hsl($second-hue, $second-sat, 84);
+$secondary3:  hsl($second-hue, $second-sat, 96);
+
+$base03: hsl($accent-hue, 11, 12);
+$base02: hsl($accent-hue, 11, 24);
+$base01: hsl($accent-hue, 11, 36);
+$base00: hsl($accent-hue, 11, 50);
+$base0:  hsl($accent-hue, 11, 60);
+$base1:  hsl($accent-hue, 11, 72);
+$base2:  hsl($accent-hue, 11, 84);
+$base3:  hsl($accent-hue, 11, 96);
+
+$site-bg: $base3;
+$site-fg: $base03;
+$site-link-color: $accent00;
+$site-link-visited-color: $secondary00;
+$site-link-hover-color: red;
+
+$header-bg: $accent02;
+$header-fg: $accent3;
+
+$article-h1: $secondary00;
+$article-h2: $secondary00;
+
+$footer-bg:      $secondary0;
+$footer-dark-bg: $secondary00;
+$footer-fg:      $base2;
+$footer-link-color: $base3;
+$hero-bg: $secondary00;
+
+$card-bg: $base3;
+$card-fg: $base02;

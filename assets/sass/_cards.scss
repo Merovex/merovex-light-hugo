@@ -27,7 +27,7 @@
 
   .card {
     border: 1px solid text-contrast($card-bg, $site-bg);
-    box-shadow: 0.2em 0.2em 0.2em rgba(#000, 0.1);
+    box-shadow: 0.2em 0.2em 0.2em rgba($black, 0.1);
     background: $card-bg;
     color: text-contrast($card-fg, $card-bg);
     @include dark-mode {
@@ -102,20 +102,21 @@
         color: $card-bg;
         text-decoration: none;
         padding: 1em 2em;
-        box-shadow: 0.2em 0.2em 1em rgba(#000, 0.6);
+        box-shadow: 0.2em 0.2em 1em rgba($black, 0.6);
         transition: background 0.2s;
         transition: color 0.2s;
         &:hover {
-          box-shadow: 0.1em 0.1em 0.5em rgba(#000, 0.8);
+          box-shadow: 0.1em 0.1em 0.5em rgba($black, 0.8);
         }
       }
-      @include cat-color($secondary0);
-      &.philosophy        { @include cat-color(adjust-hue($secondary0, 50deg));  }
-      &.technology        { @include cat-color(adjust-hue($secondary0, 100deg)); }
-      &.worldbuilding     { @include cat-color(adjust-hue($secondary0, 150deg)); }
-      &.writing           { @include cat-color(adjust-hue($secondary0, 200deg)); }
-      &.writing-craft     { @include cat-color(adjust-hue($secondary0, 250deg)); }
-      &.writing-on-github { @include cat-color(adjust-hue($secondary0, 300deg)); }
+      $cat-color-base: $accent !default;
+      @include cat-color($cat-color-base);
+      &.philosophy        { @include cat-color(adjust-hue($cat-color-base, 50deg));  }
+      &.technology        { @include cat-color(adjust-hue($cat-color-base, 100deg)); }
+      &.worldbuilding     { @include cat-color(adjust-hue($cat-color-base, 150deg)); }
+      &.writing           { @include cat-color(adjust-hue($cat-color-base, 200deg)); }
+      &.writing-craft     { @include cat-color(adjust-hue($cat-color-base, 250deg)); }
+      &.writing-on-github { @include cat-color(adjust-hue($cat-color-base, 300deg)); }
     }
   }
 }

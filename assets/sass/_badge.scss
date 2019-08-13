@@ -6,9 +6,9 @@ a.badge {
   display: inline-block;
 }
 .badge-secondary {
-  background: $accent0;
+  background: $badge-bg;
   &:hover {
-    background: $secondary00;
+    background: $badge-fg;
     transition: background 0.2s;
   }
 }

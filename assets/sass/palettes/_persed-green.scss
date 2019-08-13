@@ -1,0 +1,53 @@
+$base-hue: 7;
+$saturation: 40;
+// https://www.designspiration.net/palette/e5e7e4-6e6a8a-040203-c3bda5-984e3b/
+// https://www.designspiration.net/palette/30311a-222010-8e4b11-9c967b-5a3a15/ This
+// https://www.designspiration.net/palette/322c27-5b432f-f3c36c-995b36-d97834/
+$theme-colors: (
+  "accent": #5a3a15, //hsl(160,60,40),
+  "base":   #8e4b11,
+  "white":  #f4f4f4,
+  "light":  #e7d7c4,
+  "dark":   #30311a,
+  "black":  #222010,
+
+);
+// @debug map-get($theme-colors, "dark");
+$base:           map-get($theme-colors, "base");
+$accent:         map-get($theme-colors, "accent");
+
+$light:          map-get($theme-colors, "light");
+$dark:           map-get($theme-colors, "dark");
+$black:          hsl(hue($base), 11, 10) !default;
+$white:          hsl(hue($base), 11, 98) !default;
+
+$site-bg:        $white;
+$site-fg:        $black;
+$header-bg:      $base;
+$header-fg:      $white;
+$jumbotron-bg:   $base;
+
+$badge-bg:       $base;
+$badge-fg:       $white;
+$cat-color-base: $base;
+$card-bg:        $white;
+$card-fg:        $dark;
+
+
+$cookie-bg:      $accent;
+$cookie-fg:      $white;
+
+$accent-color:   $accent;
+
+
+$site-link-color: hsl(160,80,60);
+$site-link-visited-color: hsl(280,80,60);
+$site-link-hover-color: $red;
+
+$article-h1: $base;
+$article-h2: $base;
+//
+$footer-bg:      $accent;
+$footer-dark-bg: $accent;
+
+$hero-bg: $accent;

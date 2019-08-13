@@ -12,8 +12,11 @@
     "figure"
     "meta"
     "text";
+  @include mobile {
+    width: 90%;
+  }
   @include tablet-up {
-    width: 38em;
+    width: 33em;
     padding-bottom: 0.5in;
   }
   @include laptop-up {

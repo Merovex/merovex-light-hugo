@@ -2,8 +2,8 @@ $bg: text-contrast($footer-bg, $site-bg);
 footer {
   @extend .no-print;
   background: $bg;
-  color: $base2;
-  svg { fill: $base2; }
+  color: $light;
+  svg { fill: $light; }
   nav, h3, form { margin: 0 1em; width: 90%; }
   #footer-brand {
     grid-area: fbrand;
@@ -34,7 +34,7 @@ footer {
   #copyright {
     grid-area: copy;
     background: darken($bg,10);
-    color: $base3;
+    color: $light;
     text-align: center;
     margin-top: 2em;
     padding: 0.5em;

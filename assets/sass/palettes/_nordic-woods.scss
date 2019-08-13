@@ -6,35 +6,40 @@ $lead:        #9AACB8; // Lead
 $frost:       #DDE2E3; // Frost (Darkest frost: #191d1e)
 $darkest-frost: #191D1D;
 
-$accent03: darken($nightfall, 20);
-$accent02: darken($nightfall, 15);
-$accent01: darken($nightfall, 10);
-$accent00: darken($nightfall, 5);
-$accent:  $nightfall;
-$accent0: lighten($nightfall,15);
-$accent1: lighten($nightfall,30);
-$accent2: lighten($nightfall,45);
-$accent3: lighten($nightfall,60);
+$nightfall:  hsl(223,35,36);
+$burntamber: hsl(24,51,70);
+$frost:      hsl(190,3,89);
 
-$secondary03:  darken($burntamber, 48);
-$secondary02:  darken($burntamber, 36);
-$secondary01:  darken($burntamber, 24);
-$secondary00:  darken($burntamber, 12);
-$secondary0:   lighten($burntamber, 0);
-$secondary1:   lighten($burntamber, 13);
-$secondary2:   lighten($burntamber, 26);
-$secondary3:   lighten($burntamber, 40);
+$accent-hue: 223; $accent-sat: 25;
+$second-hue: 24; $second-sat: 51;
+$base-hue: 24; $base-sat: 3;
 
+$accent03: hsl($accent-hue, $accent-sat, 12);
+$accent02: hsl($accent-hue, $accent-sat, 24);
+$accent01: hsl($accent-hue, $accent-sat, 36);
+$accent00: hsl($accent-hue, $accent-sat, 50);
+$accent0:  hsl($accent-hue, $accent-sat, 60);
+$accent1:  hsl($accent-hue, $accent-sat, 72);
+$accent2:  hsl($accent-hue, $accent-sat, 84);
+$accent3:  hsl($accent-hue, $accent-sat, 96);
 
-$base-color: #191d1e;
-$base03:  $base-color; //#3E3E3B;
-$base02:  lighten($base-color, 12);
-$base01:  lighten($base-color, 24);
-$base00:  lighten($base-color, 36);
-$base0:   lighten($base-color, 48);
-$base1:   lighten($base-color, 60);
-$base2:   lighten($base-color, 72);
-$base3:   lighten($base-color, 84);
+$secondary03: hsl($second-hue, $second-sat, 12);
+$secondary02: hsl($second-hue, $second-sat, 24);
+$secondary01: hsl($second-hue, $second-sat, 36);
+$secondary00: hsl($second-hue, $second-sat, 50);
+$secondary0:  hsl($second-hue, $second-sat, 60);
+$secondary1:  hsl($second-hue, $second-sat, 72);
+$secondary2:  hsl($second-hue, $second-sat, 84);
+$secondary3:  hsl($second-hue, $second-sat, 96);
+
+$base03: hsl($base-hue, $base-sat, 12);
+$base02: hsl($base-hue, $base-sat, 24);
+$base01: hsl($base-hue, $base-sat, 36);
+$base00: hsl($base-hue, $base-sat, 50);
+$base0:  hsl($base-hue, $base-sat, 60);
+$base1:  hsl($base-hue, $base-sat, 72);
+$base2:  hsl($base-hue, $base-sat, 84);
+$base3:  hsl($base-hue, $base-sat, 96);
 
 $site-bg: $base3;
 $site-fg: $accent02;
@@ -42,7 +47,7 @@ $site-link-color: $blue;
 $site-link-visited-color: $violet;
 $site-link-hover-color: $red;
 
-$header-bg: $accent01;
+$header-bg: $accent02;
 $header-fg: $accent3;
 
 $article-h1: $secondary00;
