@@ -67,6 +67,12 @@
       <section id='text'>
         {{ .Content }}
       </section>
+      {{ if isset .Params "patreon" }}
+      <aside class="patreon">
+        Liked it? Take a second to support me on Patreon!
+        <button type="button" name="button">Patreon Button</button>
+      </aside>
+      {{ end }}
     </article>
     <aside id="links">
 
