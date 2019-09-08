@@ -1,37 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat|Merriweather|Merriweather+Sans");
-// @import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Open+Sans|Montserrat");
-// @font-face {
-//     font-family: 'Libre Caslon Display';
-//     src: url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.eot');
-//     src: url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.woff') format('woff'),
-//          url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.ttf') format('truetype'),
-//          url('/fonts/libre-caslon-display/librecaslondisplay-regular-webfont.svg#libre_caslon_textregular') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-// @font-face {
-//     font-family: 'Libre Caslon';
-//     src: url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.eot');
-//     src: url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.woff') format('woff'),
-//          url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.ttf') format('truetype'),
-//          url('/fonts/libre-caslon-regular/librecaslontext-regular-webfont.svg#libre_caslon_textregular') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat|Merriweather|Libre+Franklin|Merriweather+Sans|IM+Fell+English+SC");
 
 $font-size-base: 1.2rem;
 :root {
-  --font-family-sans-serif:  "Merriweather Sans", "Libre Franklin", "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-serif: "Merriweather", "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-header: "Merriweather",'Libre Caslon Display', "Libre Caslon", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-system: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif:  "Merriweather Sans", "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-serif: "Merriweather", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-header: "IM Fell English SC", Georgia, serif;
   --font-family-print:  Bookerly, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
   font-size: $font-size-base !important;
-  font-family: var(--font-family-sans-serif);
+  font-family: var(--font-family-serif);
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
 }
@@ -42,7 +22,8 @@ body {
 .badge, .btn { font-family: var(--font-family-sans-serif); }
 .brand { font-family: Montserrat; font-size: 1.3em; font-weight: normal; }
 h1, h2, h3, h4 {
-  font-family: var(--font-family-sans-serif);
+  // font-family: var(--font-family-sans-serif);
+  font-family: var(--font-family-header);
   margin-bottom: 0.4em;
   margin-top: 1.2em;
   small {

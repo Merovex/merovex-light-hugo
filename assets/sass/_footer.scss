@@ -1,9 +1,13 @@
 $bg: text-contrast($footer-bg, $site-bg);
+$bg: #33281F;
+// $fg: lighten($bg, 80%);
+$fg: text-contrast(hsla(28,0%,100%,.4), $bg);
 footer {
+  font-family: var(--font-family-system);
   @extend .no-print;
   background: $bg;
-  color: $light;
-  svg { fill: $light; }
+  color: $fg;
+  svg { fill: $fg; }
   nav, h3, form { margin: 0 1em; width: 90%; }
   #footer-brand {
     grid-area: fbrand;
@@ -23,22 +27,29 @@ footer {
   #footer-links {
     grid-area: flinks;
     ul { padding: 0;
+      list-style-type: none;
       li {
         margin-left: 1em;
+
+          padding: 3px 0;
         a {
-          color: text-contrast($site-link-color, $bg);
+          color: $fg;
+          text-decoration: none;
+          &:hover {
+            color: hsla(28,0,100%,1);
+          }
         }
       }
     }
   }
   #copyright {
     grid-area: copy;
-    background: darken($bg,10);
-    color: $light;
+    color: text-contrast(hsla(28,0%,100%,.4), $bg);
     text-align: center;
     margin-top: 2em;
     padding: 0.5em;
     font-size: 0.8em;
+    font-family: var(--font-family-system);
   }
   @include grid {
     display: grid;

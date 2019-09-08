@@ -1,5 +1,11 @@
 main#single {
   article {
+    a {
+      font-family: var(--font-family-sans-serif);
+    }
+    cite {
+      border-bottom: 1px dotted $cookie-bg;
+    }
     @media screen {
       margin: 0 auto !important;
       @import "single-includes/blockquote";

@@ -8,9 +8,9 @@ $theme-colors: (
   "base":   #8e4b11,
   "white":  #f4f4f4,
   "light":  #e7d7c4,
-  "dark":   #30311a,
+  "dark":   #20232a,
   "black":  #222010,
-
+  "footer": #33281F,
 );
 // @debug map-get($theme-colors, "dark");
 $base:           map-get($theme-colors, "base");
@@ -39,8 +39,8 @@ $cookie-fg:      $white;
 $accent-color:   $accent;
 
 
-$site-link-color: hsl(160,80,60);
-$site-link-visited-color: hsl(280,80,60);
+$site-link-color: hsl(150,60,50);
+$site-link-visited-color: hsl(270,80,60);
 $site-link-hover-color: $red;
 
 $article-h1: $base;
