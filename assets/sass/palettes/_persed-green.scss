@@ -18,7 +18,7 @@ $base:           map-get($theme-colors, "base");
 $accent:         map-get($theme-colors, "accent");
 $light:          map-get($theme-colors, "light");
 $dark:           map-get($theme-colors, "dark");
-$black:          hsl(hue($base), 11, 10) !default;
+$black:          hsl(hue($base), 11, 11) !default;
 $white:          hsl(hue($base), 11, 98) !default;
 
 $site-bg:        $white;

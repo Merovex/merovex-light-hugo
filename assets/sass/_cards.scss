@@ -31,7 +31,7 @@
     background: $card-bg;
     color: text-contrast($card-fg, $card-bg);
     @include dark-mode {
-      border-color: text-contrast($card-fg, $site-fg);
+      border-color: text-contrast(lighten($card-bg, 5),$card-bg);
       background: $card-fg;
       color: text-contrast($card-bg, $card-fg);
     }
@@ -48,7 +48,7 @@
       border: 1px solid;
       border-color: text-contrast($card-bg, $site-bg);
       @include dark-mode {
-        border-color: text-contrast($card-bg, $site-fg);
+        border-color: text-contrast(lighten($card-bg, 5),$card-bg);
       }
     }
     h4 {
@@ -90,6 +90,9 @@
       font-size: .8rem;
       padding: 0.5rem 0;
       font-family: var(--font-family-system);
+      @include dark-mode() {
+        color: text-contrast(lighten($card-bg, 5),$card-bg);
+      }
     }
     .category {
       position: absolute;
