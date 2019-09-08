@@ -7,24 +7,52 @@ footer {
   @extend .no-print;
   background: $bg;
   color: $fg;
+  input {
+    display: inline-block;
+    padding: .4rem .7rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $bg;
+    width: 60%;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .4rem .7rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  h5 {
+    width: 8em;
+    margin: 0 auto;
+    // font-size: 2em;
+    color: #FFF;
+    font-family: var(--font-family-system);
+  }
   svg { fill: $fg; }
-  nav, h3, form { margin: 0 1em; width: 90%; }
+  nav, h5, form { margin: 0 1em; width: 90%; }
   #footer-brand {
     grid-area: fbrand;
     text-align: center;
-    h3 {
-      width: 8em;
-      margin: 0 auto;
-      font-size: 2em;
-      svg { height: 3rem !important;
-        display: inline-block;
-        float: left;
-        padding-right: 0.2em;
-      }
+
+    svg {
+      height: 3rem !important;
     }
   }
   #footer-cta   { grid-area: fcta; }
-  #footer-links {
+  #site-map {
     grid-area: flinks;
     ul { padding: 0;
       list-style-type: none;
@@ -67,7 +95,7 @@ footer {
     }
     @include laptop-up {
       padding-top: 0.5in;
-      grid-template-columns: 3fr 2fr 4fr;
+      grid-template-columns: 1fr 2fr 4fr;
       grid-template-areas:
         "fbrand flinks fcta"
         "copy copy copy";

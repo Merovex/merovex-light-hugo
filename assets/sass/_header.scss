@@ -10,9 +10,9 @@
        darken($header-bg, 7%) 50%,
        darken($header-bg, 7%) 100%);
      }
-  @include dark-mode {
-    background: $header-bg;
-  }
+  // @include dark-mode {
+  //   background: $header-bg;
+  // }
   a {
     text-decoration: none;
     color: text-contrast($header-fg, $site-fg);

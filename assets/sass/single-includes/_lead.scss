@@ -1,19 +1,37 @@
 // @media screen {
   section#text {
-    &>p:first-of-type {
-      font-size: 1.25em;
-      line-height: 1.5;
+    @include mobile {
+      &>p:first-of-type {
+        font-size: 1.1em;
+      }
+      &>p:first-of-type:first-letter {
+          float: left;
+          font-size: 3em;
+          line-height: 0.9;
+          padding-right: 4px;
+          color: text-contrast($accent-color, $site-bg);
+          @include dark-mode {
+            color: text-contrast($accent-color, $site-fg);
+          }
+          font-family: var(--font-family-serif);
+      }
     }
-    &>p:first-of-type:first-letter {
-        float: left;
-        font-size: 3.5em;
-        line-height: 0.8;
-        padding-right: 4px;
-        color: text-contrast($accent-color, $site-bg);
-        @include dark-mode {
-          color: text-contrast($accent-color, $site-fg);
-        }
-        font-family: var(--font-family-serif);
+    @include tablet-up {
+      &>p:first-of-type {
+        font-size: 1.25em;
+        line-height: 1.5;
+      }
+      &>p:first-of-type:first-letter {
+          float: left;
+          font-size: 3.5em;
+          line-height: 0.8;
+          padding-right: 4px;
+          color: text-contrast($accent-color, $site-bg);
+          @include dark-mode {
+            color: text-contrast($accent-color, $site-fg);
+          }
+          font-family: var(--font-family-serif);
+      }
     }
   }
 // }

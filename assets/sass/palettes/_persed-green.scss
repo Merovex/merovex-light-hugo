@@ -9,8 +9,9 @@ $theme-colors: (
   "white":  #f4f4f4,
   "light":  #e7d7c4,
   "dark":   #20232a,
-  "black":  #222010,
+  "xblack":  #222010,
   "footer": #33281F,
+  "black": #20232a,
 );
 // @debug map-get($theme-colors, "dark");
 $base:           map-get($theme-colors, "base");
@@ -30,7 +31,7 @@ $badge-bg:       $base;
 $badge-fg:       $white;
 $cat-color-base: $base;
 $card-bg:        $white;
-$card-fg:        $dark;
+$card-fg:        $black;
 
 
 $cookie-bg:      $accent;

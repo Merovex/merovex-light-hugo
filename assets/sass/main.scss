@@ -1,6 +1,6 @@
 $color-scheme-debug: dark;
 $grid-debug: grid;
-// $color-scheme-debug: debug;
+// $color-scheme-debug: light;
 // $grid-debug: debug; // grid is for production.
 
 @import "mixins";
@@ -40,8 +40,8 @@ html, body {
       }
     }
     @include dark-mode {
-      background: lighten($site-fg,10);
-      color: text-contrast($site-bg, $site-fg);
+      background: $site-fg;
+      color: text-contrast(lighten($site-fg, 5), $site-fg);
       a {
         color: text-contrast($site-link-color, $site-fg);
         &:hover {
