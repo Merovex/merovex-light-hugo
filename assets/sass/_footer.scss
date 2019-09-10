@@ -1,7 +1,5 @@
-$bg: text-contrast($footer-bg, $site-bg);
-$bg: #33281F;
-// $fg: lighten($bg, 80%);
-$fg: text-contrast(hsla(28,0%,100%,.4), $bg);
+$bg: hsl(15,5,28);
+$fg: text-contrast(lighten($bg, 5), $bg, 7);
 footer {
   font-family: var(--font-family-system);
   @extend .no-print;

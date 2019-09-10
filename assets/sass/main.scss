@@ -40,8 +40,8 @@ html, body {
       }
     }
     @include dark-mode {
-      background: $site-fg;
-      color: text-contrast(lighten($site-fg, 5), $site-fg);
+      background: $black;
+      color: text-contrast(lighten($black, 5), $black, 7);
       a {
         color: text-contrast($site-link-color, $site-fg);
         &:hover {

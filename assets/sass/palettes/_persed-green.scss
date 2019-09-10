@@ -14,12 +14,16 @@ $theme-colors: (
   "black": #20232a,
 );
 // @debug map-get($theme-colors, "dark");
-$base:           map-get($theme-colors, "base");
-$accent:         map-get($theme-colors, "accent");
-$light:          map-get($theme-colors, "light");
-$dark:           map-get($theme-colors, "dark");
-$black:          hsl(hue($base), 11, 11) !default;
-$white:          hsl(hue($base), 11, 98) !default;
+$base:           hsl( 15, 44, 33);
+$accent:         hsl(192, 100, 25);
+$light:          hsl(15, 11, 88);
+$dark:           hsl(15, 11, 22);
+// $base:           map-get($theme-colors, "base");
+// $accent:         map-get($theme-colors, "accent");
+// $light:          map-get($theme-colors, "light");
+// $dark:           map-get($theme-colors, "dark");
+$black:          hsl(192, 11, 14) !default;
+$white:          hsl(192, 11, 98) !default;
 
 $site-bg:        $white;
 $site-fg:        $black;
@@ -40,8 +44,8 @@ $cookie-fg:      $white;
 $accent-color:   $accent;
 
 
-$site-link-color: hsl(150,60,50);
-$site-link-visited-color: hsl(270,80,60);
+$site-link-color: hsl(179,100,30);
+$site-link-visited-color: hsl(277,55,36);
 $site-link-hover-color: $red;
 
 $article-h1: $base;
