@@ -4,27 +4,39 @@ figure#article-image {
   @extend .no-print;
   position: relative;
   font-family: var(--font-family-sans-serif) !important;
-      overflow: hidden;
+  overflow: hidden;
+
   img {
     width: 100%;
     border-radius: $border-radius;
   }
-  figcaption {
-    position: absolute;
-    width: calc(100% - 1em);
-    bottom: 6px;
-    left: 0;
-    height: 1.4em;
-    padding: 0.3em 0.5em;
-    text-shadow: 1px 1px 1px $black;
-    font-size: 80%;
-    background: rgba($black, 0.8);
-    color: map-get($theme-colors, "white");
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-    a {
-      color: rgba($white, 0.7) !important;
-      &:hover { color: #FFF !important; }
+  @include mobile {
+    figcaption {
+      font-size: 60%;
+      text-align: center;
+      span {
+        display: block;
+      }
+    }
+  }
+  @include tablet-up {
+    figcaption {
+      font-size: 60%;
+      position: absolute;
+      width: calc(100% - 8px);
+      bottom: 6px;
+      left: 0;
+      height: 1.4em;
+      padding: 0.3em 0.5em;
+      text-shadow: 1px 1px 1px $black;
+      background: rgba($black, 0.8);
+      color: map-get($theme-colors, "white");
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      a {
+        color: rgba($white, 0.7) !important;
+        &:hover { color: #FFF !important; }
+      }
     }
   }
 }

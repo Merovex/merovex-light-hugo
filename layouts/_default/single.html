@@ -10,7 +10,7 @@
           &ldquo;{{ .Params.photo.caption }},&rdquo;
           <a href="{{ .Params.photo.url }}" data-proofer-ignore>
             {{ .Params.photo.creator }}</a>,
-            {{ .Params.photo.license }}.
+            <span class='license'>{{ .Params.photo.license }}.</span>
         </figcaption>
       </figure>
       {{ end }}
