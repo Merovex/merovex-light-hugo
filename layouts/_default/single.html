@@ -55,7 +55,7 @@
       <aside id="metadata">
         {{ if isset .Params "tags" }}<p class='text-center'>
           <p class="text-muted sans-font">Tagged as: </p>{{ range .Params.tags }}
-          <a class='badge badge-secondary' style='color: white; text-decoration: none;' href="/tags/{{ . | urlize }}">{{ .|title  }}</a> {{ end }}
+          <a class='badge badge-secondary' href="/tags/{{ . | urlize }}">{{ .|title  }}</a> {{ end }}
         {{ end }}</p>
         {{- partial "reading-time.html" (dict "context" .) -}}
       </aside>

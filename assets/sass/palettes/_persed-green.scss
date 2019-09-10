@@ -14,16 +14,15 @@ $theme-colors: (
   "black": #20232a,
 );
 // @debug map-get($theme-colors, "dark");
-$base:           hsl( 15, 44, 33);
-$accent:         hsl(192, 100, 25);
-$light:          hsl(15, 11, 88);
-$dark:           hsl(15, 11, 22);
-// $base:           map-get($theme-colors, "base");
-// $accent:         map-get($theme-colors, "accent");
-// $light:          map-get($theme-colors, "light");
-// $dark:           map-get($theme-colors, "dark");
-$black:          hsl(192, 11, 14) !default;
-$white:          hsl(192, 11, 98) !default;
+// https://www.colorhexa.com/b87333
+$base-hue: 28;
+$accent-hue: 209;
+$base:           hsl($base-hue, 56, 41);
+$accent:         hsl($accent-hue, 56, 41);
+$light:          hsl($base-hue, 11, 88);
+$dark:           hsl($base-hue, 11, 22);
+$black:          hsl($accent-hue, 11, 14) !default;
+$white:          hsl($accent-hue, 11, 98) !default;
 
 $site-bg:        $white;
 $site-fg:        $black;
@@ -44,9 +43,9 @@ $cookie-fg:      $white;
 $accent-color:   $accent;
 
 
-$site-link-color: hsl(179,100,30);
-$site-link-visited-color: hsl(277,55,36);
-$site-link-hover-color: $red;
+$site-link-color: hsl(149,56,41);
+$site-link-visited-color: hsl(329,56,41);
+$site-link-hover-color: hsl(329,56,41);
 
 $article-h1: $base;
 $article-h2: $base;
