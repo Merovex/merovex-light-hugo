@@ -1,0 +1,42 @@
+$light-dark-enough: text-contrast(darken($site-bg,5),$site-bg);
+$dark-dark-enough: text-contrast(#222,$black);
+table {
+  th, td {
+    padding: 4px;
+  }
+  width: 100%;
+  font-family: var(--font-family-system) !important;
+  border-collapse: collapse;
+  border: 1px solid $light-dark-enough;
+  th {
+    background: darken($light-dark-enough,20);
+    color: $white;
+  }
+  tr {
+    border: 1px solid darken($light-dark-enough,5);
+  }
+  @include dark-mode() {
+    border-color: $dark-dark-enough;
+    th {
+      background-color: $white;
+      color: $black;
+    }
+    tr {
+      border: 1px solid lighten($dark-dark-enough,5);
+    }
+  }
+  tr:nth-child(even) {
+    background-color: $light-dark-enough;
+    background-color: text-contrast($site-fg, $light-dark-enough);
+    @include dark-mode() {
+      background-color: $dark-dark-enough;
+      color: #000;
+      a {
+        color: text-contrast($site-link-color, $dark-dark-enough);
+        &:hover {
+          color: text-contrast($site-link-visited-color, $dark-dark-enough);
+        }
+      }
+    }
+  }
+}

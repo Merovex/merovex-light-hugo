@@ -3,6 +3,24 @@ main#single {
     a {
       font-family: var(--font-family-sans-serif);
     }
+    strong {
+      font-size: 1.1em;
+      // color: text-contrast($accent-color,$white);
+      @include dark-mode {
+        color: text-contrast($accent-color,$black);
+      }
+    }
+    h4, h5 {
+      display: inline-block;
+      float: left;
+      margin: 0;
+      padding-right: 1em;
+      line-height: 1;
+      font-weight: bold;
+      @include dark-mode {
+        color: text-contrast($accent-color,$black);
+      }
+    }
     cite {
       border-bottom: 1px dotted $cookie-bg;
     }
@@ -12,6 +30,7 @@ main#single {
       @import "single-includes/grid";
       @import "single-includes/lead";
       @import "single-includes/topography";
+      @import "single-includes/table";
     }
     @import "single-includes/metadata";
     @import "single-includes/figure";
